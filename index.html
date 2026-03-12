@@ -3,112 +3,53 @@
 
 <head>
   <title>test 1</title>
-  <style>
-    #content {
-      display: flex;
-      flex-direction: column;
-      /* align-items: center; */
-      min-width: 60vw;
-      /* min-width: 10px; */
-      background-color: lightpink;
-      position:absolute;
-      left:20%;
-      top:5%;
-      min-height: 80vh;
-      padding:1vw;
-    }
-    @media only screen and (max-width: 800px) {
-      #content {
-        width: 90%;
-        left:5%;
-      }
-    }
-    body{
-      /* text-align: center; */
-      align-items: center;
-      background-color: aqua;
-      background-image: url("img/bg.jpg");
-      background-attachment: fixed;
-    }
-    textarea{ 
-      /* width: 98%; */
-      height: 98vh;
-      /* height: fit-content; */
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body onload="loadContent()">
   <script>
-    function shuffle(array) {
-      let currentIndex = array.length;
-
-      // While there remain elements to shuffle...
-      while (currentIndex != 0) {
-
-        // Pick a remaining element...
-        let randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex--;
-
-        // And swap it with the current element.
-        [array[currentIndex], array[randomIndex]] = [
-          array[randomIndex], array[currentIndex]];
+    const tytuly = ["tytul 1", "tytul 2", "tytul 3", "tytul 4", "tytul 5"];
+    pierwszeZdania = {
+      "europosel":"Szanowny Panie europośle,"
+    }
+    const akapity1 = ["pierwszy akapit 1","pierwszy akapit 2","pierwszy akapit 3","pierwszy akapit 4","pierwszy akapit 5"]
+    const akapity2 = ["drugi akapit 1","drugi akapit 2","drugi akapit 3","drugi akapit 4","drugi akapit 5"]
+    const podpisPoczatek = "\nZ poważaniem,\n"
+    
+    // email_dict={
+    //   "europosel":{
+    //     "europosel": ["kontakt@arlukowicz.pl", "bartosz.arlukowicz@europarl.europa.eu", "bartoszadam.arlukowicz@europarl.europa.eu", "robert.biedron@europarl.europa.eu", "adam.bielan@europarl.europa.eu", "tobiasz.bochenski@europarl.europa.eu", "grzegorz.braun@europarl.europa.eu", "krzysztof.brejza@europarl.europa.eu", "joachim.brudzinski@europarl.europa.eu", "tomasz.buczek@europarl.europa.eu", "waldemar.buda@europarl.europa.eu", "poczta@borysbudka.pl", "borys.budka@europarl.europa.eu", "andrzej.bula@europarl.europa.eu", "michal.dworczyk@europarl.europa.eu", "m.dworczyk@wp.pl", "andrzej@halicki.pl", "andrzej.halicki@europarl.europa.eu", "krzysztofandrzej.hetman@europarl.europa.eu", "krzysztof.hetman@europarl.europa.eu", "patrykjaki.kraj@gmail.com", "patryktomasz.jaki@europarl.europa.eu", "dariusz.jonski@europarl.europa.eu", "mariusz.kaminski@europarl.europa.eu", "michal.kobosko@europarl.europa.eu", "lukasz.kohut@gmail.com", "lukasz.kohut@europarl.europa.eu", "janusz.lewandowski@europarl.europa.eu", "arkadiusz.mularczyk@europarl.europa.eu", "piotr.muller@europarl.europa.eu", "daniel.obajtek@europarl.europa.eu", "kontakt@daniel-obajtek.pl", "jacek.ozdoba@europarl.europa.eu", "jacek.protas@europarl.europa.eu", "bogdan.rzonca@europarl.europa.eu", "bartlomiej.sienkiewicz@europarl.europa.eu", "marcin.sypniewski@europarl.europa.eu", "michal.szczerba@europarl.europa.eu", "krzysztof.smiszek@europarl.europa.eu", "dominik.tarczynski@europarl.europa.eu", "stanislaw.tyszka@europarl.europa.eu", "michal.wawrykiewicz@europarl.europa.eu", "wybory@kosmazlotowski.pl", "kosmatadeusz.zlotowski@europarl.europa.eu"]
+    //   }
+    // }
+    email_dict={
+      "europosel":{
+        "europosel": ["sunil.ratnayake@gmail.com", "sun.ratnaya@gmail.com"]
       }
     }
-    const tytuly = ["tytul 1", "tytul 2", "tytul 3", "tytul 4", "tytul 5"];
-    const paragrafy = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id orci porta, tristique mauris non, mattis orci.\
-Ut pellentesque risus felis. Ut ante ligula, commodo ut ipsum vitae, eleifend elementum tortor. Maecenas at odio dignissim, mollis ex a,\
-faucibus lorem. Fusce a egestas mi, nec commodo augue. Morbi eu lorem eu mi dignissim pulvinar ut in eros. Phasellus viverra porta eros\
-pellentesque sodales. Mauris malesuada fermentum neque sit amet ornare. Sed ut fermentum enim, et sollicitudin est. Mauris dui ex, semper\
-sit amet ultrices sed, consectetur iaculis libero. Integer velit tortor, dapibus vel mollis vitae, hendrerit vitae nulla. Morbi ut \
-consectetur orci. Aliquam erat volutpat. Morbi maximus elit sed nulla semper blandit. Aliquam aliquam et sapien ut ultrices. Suspendisse\
-vehicula molestie eros sit amet tristique.",
-"Morbi ut nunc tellus. Sed metus arcu, porta non aliquet a, ullamcorper nec turpis. Morbi rutrum odio et elit vestibulum mollis. Ut eros \
-lorem, rhoncus at augue sed, fringilla fermentum tellus. Nam ut ligula elementum, tempor sapien in, egestas urna. Aliquam dignissim, neque\
-eget euismod efficitur, massa nulla gravida metus, eget consectetur diam diam ac urna. Nam lobortis malesuada quam et vehicula. Aliquam\
-rutrum at tellus accumsan eleifend. Nunc sit amet risus sit amet eros iaculis suscipit a vel magna. Aenean ullamcorper lacinia orci, eu\
-consequat libero auctor quis. Etiam fermentum vehicula porttitor. Proin vulputate dignissim lacinia. Morbi nunc urna, iaculis ut dolor a,\
-gbibendum feugiat felis. Pellentesque tortor mauris, fringilla sit amet nisl ac, lobortis pellentesque lacus. Morbi condimentum lacus nisl,\
-a sollicitudin orci ullamcorper sit amet. Sed suscipit non odio a hendrerit.",
-"Praesent consequat sagittis aliquam. In pharetra sed est in imperdiet. Curabitur id mi at diam porttitor laoreet vel maximus quam. Fusce\
-porta nisi in erat suscipit, condimentum faucibus mauris rutrum. Maecenas ultrices leo eget lobortis accumsan. Nunc tristique cursus commodo.\
-Etiam fermentum leo eget ante lobortis, quis vestibulum dui laoreet. Cras tempor at arcu vitae convallis. Aliquam mauris ipsum, imperdiet eget\
-dictum quis, accumsan sit amet urna. Nulla facilisi."]
-    const podipsPoczatek = "\n\nZ poważaniem,\n"
-    shuffle(paragrafy);
-    var trescMaila = "";
-    lenParagrafy = paragrafy.length;
-    for (let i = 0; i < lenParagrafy; i++) {
-      trescMaila += paragrafy[i] + "\n";
-    }
-    trescMaila += podipsPoczatek;
-    var tytul = tytuly[Math.floor(Math.random() * tytuly.length)];
-    function loadContent() {
-      // console.log("test");
-      document.getElementById("trescMaila").innerHTML = trescMaila;
-      document.getElementById("tytulMaila").value = tytul;
-    }
-    function sendFunction() {
-      tytul = encodeURIComponent(document.getElementById("tytulMaila").value);
-      tekst = encodeURIComponent(document.getElementById("trescMaila").innerHTML);
-      imie = encodeURIComponent(document.getElementById("podpisMaila").value);
-      console.log(tekst);
-      console.log(tytul);
-      window.open('mailto:sunil.ratnayake12@gmail.com?subject=' + tytul + '&body=' + tekst + imie);
-    }
   </script>
-
+  <script type="text/javascript" src="js/script.js"></script>
   <div id="content">
+    <form autocomplete="off">
     <h2>wyslij do mnie maila</h2>
 
-    <!-- <form action="mailto:someone@example.com" method="post" enctype="text/plain"> -->
-    Tytuł:<input type="text" name="tytul" id="tytulMaila" value="elo">
-    Imię do podpisu :<input type="text" name="podpis" id="podpisMaila" value="Sunil R">
+    Tytuł maila:<input type="text" name="tytul" id="tytulMaila" class="formInput">
+    </form>
+    Imię do podpisu :<input type="text" name="podpis" id="podpisMaila" class="formInput" oninput="changeMailContent()">
+    <div id="divGrupa">
+      Wyślij do osób należących do(odznacz te grupy do których nie chcesz wysyłać maili):<br>
+      <div id="groupChoice"></div>
+      Które są:
+      <select id="funkcja" onchange="changeMailContent()">
+        <option value="europosel">europosel</option>
+      </select>
+    </div>
     <button onclick="sendFunction()">wyślij</button><br>
+    <form autocomplete="off">
     Treść:
     <textarea type="text" name="tresc" id="trescMaila">
 
     </textarea><br><br>
+    </form>
     <button onclick="sendFunction()">wyślij</button>
   </div>
 
