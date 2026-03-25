@@ -4,9 +4,6 @@
 <head>
   <title>test 1</title>
   <link rel="stylesheet" href="style.css">
-</head>
-
-<body onload="loadContent()">
   <script>
     const tytuly = ["tytul 1", "tytul 2", "tytul 3", "tytul 4", "tytul 5"];
     pierwszeZdania = {
@@ -23,37 +20,14 @@
     // }
     email_dict={
       "europosel":{
-        "europosel": ["sunil.ratnayake@gmail.com", "sun.ratnaya@gmail.com"]
+        "europosel": ["sunil.ratnayake12@gmail.com", "sun.ratnaya@gmail.com"]
       }
     }
   </script>
   <script type="text/javascript" src="js/script.js"></script>
-  <div id="content">
-    <form autocomplete="off">
-    <h2>wyslij do mnie maila</h2>
+</head>
 
-    Tytuł maila:<input type="text" name="tytul" id="tytulMaila" class="formInput">
-    </form>
-    Imię do podpisu :<input type="text" name="podpis" id="podpisMaila" class="formInput" oninput="changeMailContent()">
-    <div id="divGrupa">
-      Wyślij do osób należących do(odznacz te grupy do których nie chcesz wysyłać maili):<br>
-      <div id="groupChoice"></div>
-      Które są:
-      <select id="funkcja" onchange="changeMailContent()">
-        <option value="europosel">europosel</option>
-      </select>
-    </div>
-    <button onclick="sendFunction()">wyślij</button><br>
-    <form autocomplete="off">
-    Treść:
-    <textarea type="text" name="tresc" id="trescMaila">
-
-    </textarea><br><br>
-    </form>
-    <button onclick="sendFunction()">wyślij</button>
-  </div>
-
+<body onload="loadContent()" id="body">
+  
 </body>
-
-
 </html>

@@ -21,6 +21,34 @@ function shuffle(array) {
     }
 }
 function loadContent() {
+    document.getElementById("body").innerHTML = 
+    `
+  <div id="menuDiv">
+    <img id="logo" src="img/logo/logo_black_en.png">
+  </div>
+  <div id="content">
+    <form autocomplete="off">
+
+    Tytuł maila:<input type="text" name="tytul" id="tytulMaila" class="formInput">
+    </form>
+    Imię do podpisu :<input type="text" name="podpis" id="podpisMaila" class="formInput" oninput="changeMailContent()">
+    <div id="divGrupa">
+      Wyślij do osób należących do (odznacz te grupy do których nie chcesz wysyłać maili):<br>
+      <div id="groupChoice"></div>
+      Które są:
+      <select id="funkcja" onchange="changeMailContent()">
+        <option value="europosel">europosel</option>
+      </select>
+    </div>
+    <button onclick="sendFunction()">wyślij</button><br>
+    <form autocomplete="off">
+    Treść:
+    <textarea type="text" name="tresc" id="trescMaila">
+
+    </textarea><br><br>
+    </form>
+    <button onclick="sendFunction()">wyślij</button>
+  </div>`
     pierwszeZdanie = pierwszeZdania[document.getElementById('funkcja').value]+"\n"
     groupChoiceStr = ""
     Object.keys(email_dict).forEach(function(key){

@@ -1,52 +1,75 @@
 #content {
-      display: flex;
-      flex-direction: column;
-      /* align-items: center; */
-      min-width: 60vw;
-      /* min-width: 10px; */
-      background-color: lightpink;
-      position:absolute;
-      left: 20vw;
-      top: 5vh;
-      min-height: 80vh;
-      padding: 1vw;
-    }
-    @media(max-width: 1500px) {
-      #content {
-        width: 95vw;
-        left: 1vw;
-        font-size: 1.5rem;
-      }
-      input{
-        font-size: 1.5rem;
-      }
-    }
-    body{
-      /* text-align: center; */
-      align-items: center;
-      background-color: aqua;
-      background-image: url("img/bg.jpg");
-      background-attachment: fixed;
-      background-size: 640px 360px;
-    }
-    textarea{ 
-      width: 98%;
-      height: 98vh;
-      /* height: fit-content; */
-    }
-    form{
-      width: 100%
-    }
-    .formInput {
-      width: 100%
-    }
-    select{
-      width: 20%
-    }
-    #divGrupa{
-      border-color: black;
-      border-width: 2px;
-      border-style: solid;
-      padding: 2px;
-      margin: 2px;
-    }
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  min-width: 60vw;
+  /* min-width: 10px; */
+  background-color: #FF462A;
+  position:absolute;
+  left: 20vw;
+  top: 13vh;
+  min-height: 80vh;
+  padding: 1vw;
+}
+#menuDiv{
+  background-color: #C3F5BC;
+  min-width: 60vw;
+  position:absolute;
+  left: 20vw;
+  top: 2vh;
+  height: 10vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+#logo{
+  height:10vh;
+}
+@media(max-width: 1500px) {
+  #content {
+    width: 95vw;
+    left: 1vw;
+    font-size: 1.5rem;
+  }
+  #menuDiv {
+    width: 95vw;
+    left: 1vw;
+    font-size: 1.5rem;
+  }
+  input{
+    font-size: 1rem;
+  }
+  textarea{
+    font-size: 1em;
+  }
+}
+body{
+  /* text-align: center; */
+  align-items: center;
+  background-color: #F4F1E5;
+  background-image: url("img/logo/logo_bg_black_en.png");
+  background-attachment: fixed;
+  /* background-size: 640px 360px; */
+  background-clip: border-box;
+  background-position: center;
+}
+textarea{ 
+  width: 98%;
+  height: 98vh;
+  /* height: fit-content; */
+}
+form{
+  width: 100%
+}
+.formInput {
+  width: 100%
+}
+select{
+  width: 20%
+}
+#divGrupa{
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  padding: 2px;
+  margin: 2px;
+}
