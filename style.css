@@ -46,11 +46,13 @@ body{
   /* text-align: center; */
   align-items: center;
   background-color: #F4F1E5;
-  background-image: url("img/logo/logo_bg_black_en.png");
-  background-attachment: fixed;
+  /* background-image: url("img/logo/logo_bg_black_en.png");
+  background-attachment: fixed; */
   /* background-size: 640px 360px; */
+  /* background-size: 6rem;
   background-clip: border-box;
-  background-position: center;
+  background-position: 0%, 10%; */
+  /* background-repeat:space */
 }
 textarea{ 
   width: 98%;
