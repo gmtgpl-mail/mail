@@ -23,7 +23,7 @@ function shuffle(array) {
 function loadContent() {
     document.getElementById("body").innerHTML = 
     `
-  <div id="menuDiv">
+  <div id="header">
     <img id="logo" src="img/logo/logo_black_en.png">
   </div>
   <div id="content">
@@ -72,11 +72,8 @@ function getEmailStr(){
             emails.push.apply(emails, email_dict[key][funkcja])
         })
     }
-    console.log(emails)
     shuffle(emails)
-    console.log(emails)
     returnEmailsNum = Math.min(emails.length, 3)
-    console.log("returnEmailsNum: "+returnEmailsNum)
     emailStr = ""
     for (let i = 0; i < returnEmailsNum; i++){
         emailStr += emails[i]

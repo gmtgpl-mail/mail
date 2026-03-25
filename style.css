@@ -11,7 +11,7 @@
   min-height: 80vh;
   padding: 1vw;
 }
-#menuDiv{
+#header{
   background-color: #C3F5BC;
   min-width: 60vw;
   position:absolute;
@@ -30,7 +30,7 @@
     left: 1vw;
     font-size: 1.5rem;
   }
-  #menuDiv {
+  #header {
     width: 95vw;
     left: 1vw;
     font-size: 1.5rem;
