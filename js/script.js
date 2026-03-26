@@ -37,7 +37,7 @@ function loadContent() {
       <div id="groupChoice"></div>
       Które są:
       <select id="funkcja" onchange="changeMailContent()">
-        <option value="europosel">europosel</option>
+        <!-- <option value="europosel">europosel</option> -->
       </select>
     </div>
     <button onclick="sendFunction()">wyślij</button><br>
@@ -49,6 +49,11 @@ function loadContent() {
     </form>
     <button onclick="sendFunction()">wyślij</button>
   </div>`
+    selectPoczatekStr = "";
+    Object.keys(poczatki).forEach(function(key){
+        selectPoczatekStr += "<option value=\""+key+"\">"+poczatki[key]+"</option>"
+    });
+    document.getElementById('funkcja').innerHTML = selectPoczatekStr
     pierwszeZdanie = pierwszeZdania[document.getElementById('funkcja').value]+"\n"
     groupChoiceStr = ""
     Object.keys(email_dict).forEach(function(key){
