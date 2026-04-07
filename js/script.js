@@ -29,7 +29,7 @@ function loadContent() {
   <div id="content">
     <form autocomplete="off">
 
-    Tytuł maila:<input type="text" name="tytul" id="tytulMaila" class="formInput">
+    Tytuł maila:<input type="text" name="tytul" id="tytulMaila" class="formInput" readonly>
     </form>
     Imię do podpisu :<input type="text" name="podpis" id="podpisMaila" class="formInput" oninput="changeMailContent()">
     <div id="divGrupa">
@@ -37,7 +37,6 @@ function loadContent() {
       <div id="groupChoice"></div>
       Które są:
       <select id="funkcja" onchange="changeMailContent()">
-        <!-- <option value="europosel">europosel</option> -->
       </select>
     </div>
     <button onclick="sendFunction()">wyślij</button><br>

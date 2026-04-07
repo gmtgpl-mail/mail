@@ -3,7 +3,7 @@
 
 <head>
   <title>test 1</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../../../../../../../../style.css">
   <script>
     const tytuly = ["tytul 1", "tytul 2", "tytul 3", "tytul 4", "tytul 5"];
     pierwszeZdania = {
@@ -91,10 +91,140 @@
     //   }
     // }
   </script>
-  <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+    function shuffle(array) {
+        let currentIndex = array.length;
+
+        // While there remain elements to shuffle...
+        while (currentIndex != 0) {
+
+        // Pick a remaining element...
+        let randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+        }
+    }
+    function changeEmailCheckboxByParty(partia){
+        console.log(partia)
+        console.log(document.getElementById(partia).checked)
+        val = document.getElementById(partia).checked
+        funkcja = document.getElementById("funkcja").value
+        Object.keys(email_dict[partia][funkcja]).forEach(function(emailId){
+            email = email_dict[partia][funkcja][emailId]
+            document.getElementById(email).checked = val
+        })
+    }
+    function loadEmails(){
+        funkcja = document.getElementById("funkcja").value
+        choiceStr = ""
+        Object.keys(email_dict).forEach(function(partia){
+            choiceStr+="<hr><input type=\"checkbox\" id=\""+partia+"\" onchange=\"changeEmailCheckboxByParty(\'"+partia+"\')\" checked>"+partia+"<div>"
+            Object.keys(email_dict[partia][funkcja]).forEach(function(emailId){
+                email = email_dict[partia][funkcja][emailId]
+                // console.log(email)
+                choiceStr+="<input type=\"checkbox\" id=\""+email+"\" class=\"emailCheckbox\" partia=\""+partia+"\" checked>"+email
+            })
+            choiceStr+="</div><br>"
+        })
+        document.getElementById("groupChoice").innerHTML = choiceStr
+    }
+    function loadContent() {
+        selectPoczatekStr = "";
+        Object.keys(poczatki).forEach(function(key){
+            selectPoczatekStr += "<option value=\""+key+"\">"+poczatki[key]+"</option>"
+        });
+        document.getElementById('funkcja').innerHTML = selectPoczatekStr
+        pierwszeZdanie = pierwszeZdania[document.getElementById('funkcja').value]+"\n"
+        loadEmails()
+        document.getElementById("trescMaila").innerHTML = "";
+    }
+    function getEmailStr(){
+        const emailCheckboxes = document.getElementsByClassName("emailCheckbox");
+        emailLst = []
+        emailDct = {}
+        for (let i = 0; i < emailCheckboxes.length; i++) {
+            if(emailCheckboxes[i].checked){
+                emailLst.push(emailCheckboxes[i].id)
+                emailDct[emailCheckboxes[i].id] = emailCheckboxes[i]
+            }
+        }
+        shuffle(emailLst)
+        emailStr = ""
+        if(emailLst.length == 0){
+            return ("")
+        }
+        addressCount = Math.min(emailLst.length -1, document.getElementById('ileAdresow').value-1)
+        console.log(addressCount)
+        funkcja = document.getElementById("funkcja").value
+        for (let i = 0; i< addressCount; i++){
+            email = emailLst[i]
+            emailStr += email
+            emailStr += ", "
+            emailDct[email].checked = false
+            partia = emailDct[email].getAttribute("partia")
+            email_dict[partia][funkcja].splice(email_dict[partia][funkcja].indexOf(email),1)
+        }
+        emailStr += emailLst[addressCount]
+        emailDct[emailLst[addressCount]].checked = false
+        return emailStr
+    }
+    function sendFunction(event) {
+        event.preventDefault()
+        emailStr = getEmailStr()
+        if(emailStr == ""){
+            return (1)
+        }
+        
+        tytul = encodeURIComponent(document.getElementById("tytulMaila").value);
+        tekst = encodeURIComponent(document.getElementById("trescMaila").value);
+        url = 'mailto:'+emailStr+'?subject=' + tytul + '&body=' + tekst
+        navigator.clipboard.writeText(url)
+        window.open(url);
+    }
+  </script>
 </head>
 
 <body onload="loadContent()" id="body">
-  
+<div id="header">
+    <img id="logo" src="../../../../../../../../img/logo/logo_black_en.png">
+</div>
+<div id="content">
+    <div id="instrukcja">
+        W sekcji "Zaznacz maile" możesz wybrać maile do których wysłać wiadomość.<br>
+        W polu "Na ile adresów wysłać maila?" możesz wybrać na ile adresów naraz wysłać maila.<br>
+        Niestety długość url jest ograniczona, więc można wysłać maksymalnie do 100 adresów jednocześnie.<br>
+        Po kliknięciu "wyślij" powinna otworzyć się nowa zakładka z mailem do wysłania.<br>
+        <i>Przed kliknięciem "wyślij" w nowej zakładce upewnij się że treść i tytuł maila są poprawne</i><br>
+        Jeżeli zakładka się nie otworzyła, spróbuj wkleić to co masz w schowku jako adres strony w nowej karcie (otwórz nową kartę, kliknij pasek u góry i kliknij przyciski "ctrl" i "v" równocześnie).<br>
+        Wszystkie adresy do których został wysłany mail zostaną odznaczone, więc (jeżeli nic nie zaznaczysz ponownie albo nie odświerzysz strony) żaden polityk nie dostanie tego maila dwa razy. <br>
+        Mail jest wysyłany do przypadkowych adresów z tych wybranych. <br>
+        Jeżeli chcesz odznaczyć/zaznaczyć wszystkie adresy z którejś partii, kliknij (jeden albo dwa razy) w checkbox (<input type="checkbox">) obok nazwy partii. <br>
+        Po wysłaniu maila teskt i tytuł się nie zmienią.<br>
+        Naraz widoczne są maile osób używających tych samych zaimków. Możesz zmienić zaimki używając dropdownu(tego: <select><option>1</option><option>2</option></select>) "Które są:". <br>
+        Jeżeli wyślesz maila, zmienisz zaimki i znowu zmienisz zaimki, adresy do których mail był juz wysłany <i>w ogóle się nie pojawią.</i>
+
+    </div>
+<form>
+<div id="divGrupa">
+    Zaznacz maile:<br>
+    <div id="groupChoice"></div>
+    Które są:
+    <select id="funkcja" onchange="loadEmails()">
+    </select>
+</div>
+    Na ile adresów wysłać maila?:<input type="number" name="ileAdresow" id="ileAdresow" class="formInput" min="0" max="100" value="100">
+    Tytuł maila:<input type="text" name="tytul" id="tytulMaila" class="formInput">
+
+<button onclick="sendFunction(event)">wyślij</button><br>
+
+Treść:
+<textarea type="text" name="tresc" id="trescMaila">
+</textarea><br><br>
+</form>
+<button onclick="sendFunction(event)">wyślij</button>
+</div>
 </body>
 </html>
