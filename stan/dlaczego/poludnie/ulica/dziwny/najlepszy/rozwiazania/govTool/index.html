@@ -15,15 +15,15 @@
     const akapity2 = ["drugi akapit 1","drugi akapit 2","drugi akapit 3","drugi akapit 4","drugi akapit 5"]
     const podpisPoczatek = "\nZ poważaniem,\n"
     const poczatki = {
-      "mezczyzna": "męzczyzną",
+      "mezczyzna": "mężczyzną",
       "kobieta": "kobietą",
       "europosel": "europosłem"
     }
     email_dict={
-      // "europosel":{
-      //   "europosel": 
-      //     ["kontakt@arlukowicz.pl", "bartosz.arlukowicz@europarl.europa.eu", "bartoszadam.arlukowicz@europarl.europa.eu", "robert.biedron@europarl.europa.eu", "adam.bielan@europarl.europa.eu", "tobiasz.bochenski@europarl.europa.eu", "grzegorz.braun@europarl.europa.eu", "krzysztof.brejza@europarl.europa.eu", "joachim.brudzinski@europarl.europa.eu", "tomasz.buczek@europarl.europa.eu", "waldemar.buda@europarl.europa.eu", "poczta@borysbudka.pl", "borys.budka@europarl.europa.eu", "andrzej.bula@europarl.europa.eu", "michal.dworczyk@europarl.europa.eu", "m.dworczyk@wp.pl", "andrzej@halicki.pl", "andrzej.halicki@europarl.europa.eu", "krzysztofandrzej.hetman@europarl.europa.eu", "krzysztof.hetman@europarl.europa.eu", "patrykjaki.kraj@gmail.com", "patryktomasz.jaki@europarl.europa.eu", "dariusz.jonski@europarl.europa.eu", "mariusz.kaminski@europarl.europa.eu", "michal.kobosko@europarl.europa.eu", "lukasz.kohut@gmail.com", "lukasz.kohut@europarl.europa.eu", "janusz.lewandowski@europarl.europa.eu", "arkadiusz.mularczyk@europarl.europa.eu", "piotr.muller@europarl.europa.eu", "daniel.obajtek@europarl.europa.eu", "kontakt@daniel-obajtek.pl", "jacek.ozdoba@europarl.europa.eu", "jacek.protas@europarl.europa.eu", "bogdan.rzonca@europarl.europa.eu", "bartlomiej.sienkiewicz@europarl.europa.eu", "marcin.sypniewski@europarl.europa.eu", "michal.szczerba@europarl.europa.eu", "krzysztof.smiszek@europarl.europa.eu", "dominik.tarczynski@europarl.europa.eu", "stanislaw.tyszka@europarl.europa.eu", "michal.wawrykiewicz@europarl.europa.eu", "wybory@kosmazlotowski.pl", "kosmatadeusz.zlotowski@europarl.europa.eu"]
-      // },
+      "europosel":{
+        "europosel": 
+          ["kontakt@arlukowicz.pl", "bartosz.arlukowicz@europarl.europa.eu", "bartoszadam.arlukowicz@europarl.europa.eu", "robert.biedron@europarl.europa.eu", "adam.bielan@europarl.europa.eu", "tobiasz.bochenski@europarl.europa.eu", "grzegorz.braun@europarl.europa.eu", "krzysztof.brejza@europarl.europa.eu", "joachim.brudzinski@europarl.europa.eu", "tomasz.buczek@europarl.europa.eu", "waldemar.buda@europarl.europa.eu", "poczta@borysbudka.pl", "borys.budka@europarl.europa.eu", "andrzej.bula@europarl.europa.eu", "michal.dworczyk@europarl.europa.eu", "m.dworczyk@wp.pl", "andrzej@halicki.pl", "andrzej.halicki@europarl.europa.eu", "krzysztofandrzej.hetman@europarl.europa.eu", "krzysztof.hetman@europarl.europa.eu", "patrykjaki.kraj@gmail.com", "patryktomasz.jaki@europarl.europa.eu", "dariusz.jonski@europarl.europa.eu", "mariusz.kaminski@europarl.europa.eu", "michal.kobosko@europarl.europa.eu", "lukasz.kohut@gmail.com", "lukasz.kohut@europarl.europa.eu", "janusz.lewandowski@europarl.europa.eu", "arkadiusz.mularczyk@europarl.europa.eu", "piotr.muller@europarl.europa.eu", "daniel.obajtek@europarl.europa.eu", "kontakt@daniel-obajtek.pl", "jacek.ozdoba@europarl.europa.eu", "jacek.protas@europarl.europa.eu", "bogdan.rzonca@europarl.europa.eu", "bartlomiej.sienkiewicz@europarl.europa.eu", "marcin.sypniewski@europarl.europa.eu", "michal.szczerba@europarl.europa.eu", "krzysztof.smiszek@europarl.europa.eu", "dominik.tarczynski@europarl.europa.eu", "stanislaw.tyszka@europarl.europa.eu", "michal.wawrykiewicz@europarl.europa.eu", "wybory@kosmazlotowski.pl", "kosmatadeusz.zlotowski@europarl.europa.eu"]
+      },
       "KO":{
         "mezczyzna":
           ["posel.stanislaw.lamczyk@gmail.com", "piotr.adamowicz@sejm.pl", "biuro@marcinbosacki.pl", "pawel.blizniuk@sejm.pl", "mateusz.bochenek@sejm.pl", "krzysztof.bojarski@sejm.pl", "piotr.borys@sejm.pl", "marek.chmielewski@sejm.pl", "janusz.cichon@sejm.pl", " januszcichon@januszcichon.pl", "andrzej.domanski@sejm.pl", "senator@dowhan.pl", "konrad.frysztak@sejm.pl", "patryk.gabriel@sejm.pl", "krzysztof.gadowski@sejm.pl", "info@zdzislawgawlik.com.pl", " zdzislaw.gawlik@sejm.pl", "artur.gierada@sejm.pl", "roman.giertych@sejm.pl", "tomasz.glogowski@sejm.pl", "poczta@stanislawgorczyca.pl", "krzysztof.grabczuk@sejm.pl", "jan.grabiec@sejm.pl", "marek.gzik@sejm.pl", "krzysztof.habura@sejm.pl", "marek.hok@sejm.pl", "biuro.posla.horbatowskiego@gmail.com", " lukasz.horbatowski@sejm.pl", "robert.jagla@sejm.pl", "michal.jaros@sejm.pl", "patryk.jaskulski@sejm.pl", "dominik.jaskowiec@sejm.pl", "marcin.jozefaciuk@sejm.pl", "jk@jacekkarnowski.pl", "michal.kolodziejczak@sejm.pl", "zbigniew.konwinski@sejm.pl", "tomasz.kostus@sejm.pl", "pawel.kowal@sejm.pl", " biuro@pawelkowal.pl", "michal.krawczyk@sejm.pl", "robert.kropiwnicki@sejm.pl", "wojciech.krol@sejm.pl", "marek.krzakala@sejm.pl", "adam.krzeminski@sejm.pl", "piotr.lachowicz@sejm.pl", "maciej.lasek@sejm.pl", "artur.lacki@sejm.pl", "krystian.luczak@sejm.pl", "arkadiusz.marchewka@sejm.pl", "pawel.maselko@sejm.pl", "jerzy.meysztowicz@sejm.pl", "krzysztof.mieszkowski@sejm.pl", "czeslaw.mroczek@sejm.pl", "kontakt@arkadiuszmyrcha.pl", " arkadiusz.myrcha@sejm.pl", "grzegorz.napieralski@sejm.pl", "jacek.niedzwiedzki@sejm.pl", "slawomir.nitras@sejm.pl", "tomasz.nowak@sejm.pl", "pawel.olszewski@sejm.pl", "katarzyna.osos@sejm.pl", "pawel.papke@sejm.pl", "krzysztof.piatkowski@sejm.pl", "lucjan.pietrzczyk@sejm.pl", "kazimierz@plocke.pl", " kazimierz.plocke@sejm.pl", "mariusz.popielarz@sejm.pl", "jakub.rutnicki@sejm.pl", "marek.rzasa@wp.pl", " marek.rzasa@sejm.pl", "rafal.siemaszko@sejm.pl", "tomasz.siemoniak@sejm.pl", "kontakt@waldemarslugocki.pl", " waldemar.slugocki@sejm.pl", "marek.sowa@sejm.pl", "pawel.suski@sejm.pl", "andrzej.szewinski@sejm.pl", "adam.szlapka@sejm.pl", "henryk.szopinski@sejm.pl", "tomasz.szymanski@sejm.pl", " kontakt@tomaszszymanski.pl", "lukasz.sciebiorowski@sejm.pl", "apoloniusz.tajner@sejm.pl", "cezary.tomczyk@sejm.pl", "maciej.tomczykiewicz@sejm.pl", "krzysztof.truskolaski@sejm.pl", "poczta@jaroslawurbaniak.pl", " Jaroslaw.Urbaniak@sejm.pl", "jaroslaw.walesa@sejm.pl", " jaroslawwalesa@wp.pl", "robert.wardzala@sejm.pl", "adrian.witczak@sejm.pl", "mariusz.witczak@sejm.pl", "przemyslaw.witek@sejm.pl", "boguslaw.woloszanski@sejm.pl", "maciej.wrobel@sejm.pl", " kontakt@maciejwrobel.mazury.pl", "bartosz.zawieja@sejm.pl", "witold.zembaczynski@sejm.pl", "biuro@waldydzikowski.pl", "platforma.koszalin@gmail.com", "biuro@henryksiedlaczek.pl", "senat@adambodnar.pl", "biurosenatorskie@marekborowski.pl", "borusewicz@nw.senat.gov.pl", "ryszardbrejzasenat@gmail.com", "leszekczarny@wp.pl", "senator@czarnobaj.senat.pl", "senator.arturdunin@gmail.com", "jerzy.fedorowicz@onet.eu", "senator.godyla@gmail.com", "senator@grodzki.senat.pl", "biuro@januszgromek.pl", "biuro@grupinski.pl", "jarmuziewicz@interia.pl", "biuro@jarmuziewicz.senat.pl", "biuro@kazimierzkleina.pl", "andrzej@kobiak.pl", "wladyslaw_komarnicki@wp.pl", "tomasz@lenz.senat.pl", "biuro@januszpecherz.pl", "biuro@slawomirrybicki.pl", "biuro@schetyna.pl", "szejnfeld.biuro@gmail.com", "biuro@swilski.senat.pl", "biuro@wcisla.senat.pl", "senator.marcinzawila@gmail.com", "wojciechziemniak@wp.pl"],
@@ -92,6 +92,7 @@
     // }
   </script>
   <script type="text/javascript">
+    email_sent_to = []
     function shuffle(array) {
         let currentIndex = array.length;
 
@@ -108,8 +109,6 @@
         }
     }
     function changeEmailCheckboxByParty(partia){
-        console.log(partia)
-        console.log(document.getElementById(partia).checked)
         val = document.getElementById(partia).checked
         funkcja = document.getElementById("funkcja").value
         Object.keys(email_dict[partia][funkcja]).forEach(function(emailId){
@@ -118,15 +117,24 @@
         })
     }
     function loadEmails(){
+        email_sent_to.forEach(function(values){
+          partia = values[0]
+          email = values[1]
+          if(email_dict[partia][funkcja].includes(email)){
+            email_dict[partia][funkcja].splice(email_dict[partia][funkcja].indexOf(email),1)
+          }
+        })
+        email_sent_to = []
         funkcja = document.getElementById("funkcja").value
         choiceStr = ""
         Object.keys(email_dict).forEach(function(partia){
             choiceStr+="<hr><input type=\"checkbox\" id=\""+partia+"\" onchange=\"changeEmailCheckboxByParty(\'"+partia+"\')\" checked>"+partia+"<div>"
-            Object.keys(email_dict[partia][funkcja]).forEach(function(emailId){
-                email = email_dict[partia][funkcja][emailId]
-                // console.log(email)
-                choiceStr+="<input type=\"checkbox\" id=\""+email+"\" class=\"emailCheckbox\" partia=\""+partia+"\" checked>"+email
-            })
+            if(funkcja in email_dict[partia]){
+              Object.keys(email_dict[partia][funkcja]).forEach(function(emailId){
+                  email = email_dict[partia][funkcja][emailId]
+                  choiceStr+="<input type=\"checkbox\" id=\""+email+"\" class=\"emailCheckbox\" partia=\""+partia+"\" checked>"+email
+              })
+            }
             choiceStr+="</div><br>"
         })
         document.getElementById("groupChoice").innerHTML = choiceStr
@@ -157,7 +165,6 @@
             return ("")
         }
         addressCount = Math.min(emailLst.length -1, document.getElementById('ileAdresow').value-1)
-        console.log(addressCount)
         funkcja = document.getElementById("funkcja").value
         for (let i = 0; i< addressCount; i++){
             email = emailLst[i]
@@ -165,9 +172,13 @@
             emailStr += ", "
             emailDct[email].checked = false
             partia = emailDct[email].getAttribute("partia")
-            email_dict[partia][funkcja].splice(email_dict[partia][funkcja].indexOf(email),1)
+            email_sent_to.push([partia, email])
+            // email_dict[partia][funkcja].splice(email_dict[partia][funkcja].indexOf(email),1)
         }
-        emailStr += emailLst[addressCount]
+        email = emailLst[addressCount]
+        emailStr += email
+        partia = emailDct[email].getAttribute("partia")
+        email_sent_to.push([partia, email])
         emailDct[emailLst[addressCount]].checked = false
         return emailStr
     }
