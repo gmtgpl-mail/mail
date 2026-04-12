@@ -39,6 +39,9 @@ function loadContent() {
       <select id="funkcja" onchange="changeMailContent()">
       </select>
     </div>
+    Ile maili wysłać?:
+    <input type="range" min="3" max="50" value=10 id="ileMaili" oninput="this.nextElementSibling.value = this.value">
+    <output id="ileMailiOutput">10</output> 
     <button onclick="sendFunction()">wyślij</button><br>
     <form autocomplete="off">
     Treść:
@@ -77,7 +80,9 @@ function getEmailStr(){
         })
     }
     shuffle(emails)
-    returnEmailsNum = Math.min(emails.length, 3)
+    ileMaili = document.getElementById('ileMaili').value
+    console.log(ileMaili)
+    returnEmailsNum = Math.min(emails.length, ileMaili)
     emailStr = ""
     for (let i = 0; i < returnEmailsNum; i++){
         emailStr += emails[i]
