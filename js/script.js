@@ -39,9 +39,9 @@ function loadContent() {
       <select id="funkcja" onchange="changeMailContent()">
       </select>
     </div>
-    Ile maili wysłać?:
-    <input type="range" min="3" max="50" value=10 id="ileMaili" oninput="this.nextElementSibling.value = this.value">
-    <output id="ileMailiOutput">10</output> 
+    Do ilu osób wysłać mail?:
+    <input type="range" min="3" max="50" value=25 id="ileMaili" oninput="this.nextElementSibling.value = this.value">
+    <output id="ileMailiOutput">25</output> 
     <button onclick="sendFunction()">wyślij</button><br>
     <form autocomplete="off">
     Treść:
