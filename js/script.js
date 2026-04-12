@@ -24,7 +24,7 @@ function loadContent() {
     document.getElementById("body").innerHTML = 
     `
   <div id="header">
-    <img id="logo" src="img/logo/logo_black_en.png">
+    <img id="logo" src="../img/logo/logo_black_en.png">
   </div>
   <div id="content">
     <form autocomplete="off">
