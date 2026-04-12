@@ -42,6 +42,11 @@ function loadContent() {
     Do ilu osób wysłać mail?:
     <input type="range" min="3" max="50" value=25 id="ileMaili" oninput="this.nextElementSibling.value = this.value">
     <output id="ileMailiOutput">25</output> 
+    <nobr>
+    <button onclick="copyTitle()" class="copyButton">kopiuj tytuł</button>
+    <button onclick="copyTekst()" class="copyButton">kopiuj tekst</button>
+    <button onclick="copyAddresses()" class="copyButton">kopiuj adresy e-mail</button>
+    </nobr>
     <button onclick="sendFunction()">wyślij</button><br>
     <form autocomplete="off">
     Treść:
@@ -113,4 +118,13 @@ function randomizeContent(){
     tytul = tytuly[Math.floor(Math.random() * tytuly.length)];
     document.getElementById("trescMaila").innerHTML = pierwszeZdanie + trescMaila + podpis;
     document.getElementById("tytulMaila").value = tytul;
+}
+function copyTitle(){
+    navigator.clipboard.writeText(document.getElementById('tytulMaila').value);
+}
+function copyTekst(){
+    navigator.clipboard.writeText(document.getElementById('trescMaila').innerHTML);
+}
+function copyAddresses(){
+    navigator.clipboard.writeText(getEmailStr());
 }
