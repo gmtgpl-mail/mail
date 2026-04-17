@@ -42,6 +42,7 @@ function loadContent() {
     Do ilu osób wysłać mail?:
     <input type="range" min="3" max="50" value=25 id="ileMaili" oninput="this.nextElementSibling.value = this.value">
     <output id="ileMailiOutput">25</output> 
+    Niektóre maile mogą być nie poprawne, jeśli dostaniesz odpowiedź "nie znaleziono adresu", daj nam znać.
     <button onclick="sendFunction()">wyślij</button><br>
     <form autocomplete="off">
     Treść:
@@ -49,7 +50,7 @@ function loadContent() {
 
     </textarea><br><br>
     </form>
-    <button onclick="sendFunction()">wyślij</button>
+    <button onclick="sendFunction()">wyślij</button><hr>
     <button onclick="copyTitle()">kopiuj tytuł</button>
     <button onclick="copyTekst()">kopiuj tekst</button>
     <button onclick="copyAddresses()">kopiuj adresy e-mail</button>
