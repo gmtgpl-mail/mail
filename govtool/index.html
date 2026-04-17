@@ -195,6 +195,18 @@
         navigator.clipboard.writeText(url)
         window.open(url);
     }
+    function copyTitle(event){
+        event.preventDefault()
+        navigator.clipboard.writeText(document.getElementById('tytulMaila').value);
+    }
+    function copyTekst(event){
+        event.preventDefault()
+        navigator.clipboard.writeText(document.getElementById('trescMaila').value);
+    }
+    function copyAddresses(event){
+        event.preventDefault()
+        navigator.clipboard.writeText(getEmailStr());
+    }
   </script>
 </head>
 
@@ -236,6 +248,9 @@ Treść:
 </textarea><br><br>
 </form>
 <button onclick="sendFunction(event)">wyślij</button>
+<button onclick="copyTitle(event)">kopiuj tytuł</button>
+<button onclick="copyTekst(event)">kopiuj tekst</button>
+<button onclick="copyAddresses(event)">kopiuj adresy e-mail</button>
 </div>
 </body>
 </html>
