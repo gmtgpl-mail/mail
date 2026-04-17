@@ -166,20 +166,18 @@
         }
         addressCount = Math.min(emailLst.length -1, document.getElementById('ileAdresow').value-1)
         funkcja = document.getElementById("funkcja").value
-        for (let i = 0; i< addressCount; i++){
+        shrEmailLst = []
+        for (let i = 0; i<= addressCount; i++){
+            shrEmailLst[i] = emailLst[i]
             email = emailLst[i]
-            emailStr += email
-            emailStr += ", "
             emailDct[email].checked = false
             partia = emailDct[email].getAttribute("partia")
             email_sent_to.push([partia, email])
-            // email_dict[partia][funkcja].splice(email_dict[partia][funkcja].indexOf(email),1)
         }
-        email = emailLst[addressCount]
-        emailStr += email
-        partia = emailDct[email].getAttribute("partia")
-        email_sent_to.push([partia, email])
-        emailDct[emailLst[addressCount]].checked = false
+        shrEmailLst.sort()
+        console.log(shrEmailLst)
+        emailStr = shrEmailLst.toString()
+        console.log(emailStr)
         return emailStr
     }
     function sendFunction(event) {

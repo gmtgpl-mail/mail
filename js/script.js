@@ -86,6 +86,12 @@ function getEmailStr(){
     shuffle(emails)
     ileMaili = document.getElementById('ileMaili').value
     returnEmailsNum = Math.min(emails.length, ileMaili)
+    shrEmails = []
+    for (let i = 0; i<= returnEmailsNum; i++){
+        shrEmails[i] = emails[i]
+    }
+    shrEmails.sort()
+    emailStr = shrEmails.toString()
     emailStr = ""
     for (let i = 0; i < returnEmailsNum; i++){
         emailStr += emails[i]
