@@ -86,3 +86,6 @@ select{
 .copyButton{
   width: 33%
 }
+#fedbackTextarea{
+  height:30vh;
+}
