@@ -27,6 +27,10 @@ function loadContent() {
     <img id="logo" src="../img/logo/logo_black_en.png">
   </div>
   <div id="content">
+    <nobr>
+        <a href="../">strona główna</a>
+        <a href="../feedback/">wyślij nam feedback</a>
+    </nobr>
     <form autocomplete="off">
 
     Tytuł maila:<input type="text" name="tytul" id="tytulMaila" class="formInput" readonly>

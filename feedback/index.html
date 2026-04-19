@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>wyślij nam feedback</title>
+  <link rel="stylesheet" href="../style.css">
+  <script>
+    function sendEmail(event){
+        event.preventDefault();
+        const tekst = encodeURIComponent(document.getElementById("fedbackTextarea").innerHTML);
+        console.log(tekst);
+        window.open('mailto:gmtgpl-inf@protonmail.com?subject=feedback&body=' + tekst);
+    }
+  </script>
+</head>
+
+<body id="body">
+  <div id="header">
+    <img id="logo" src="../img/logo/logo_black_en.png">
+  </div>
+  <div id="content">
+    <nobr>
+        <a href="../">strona główna</a>
+        <a href="../wyslijmail/">wyślij maila</a>
+    </nobr>
+        <form action="mailto:gmtgpl-inf@protonmail.com" method="post" enctype="text/plain">
+            <textarea id="fedbackTextarea">
+Cześć,
+Chcę wam przekazać feedback o tej stronce:
+
+ 
+</textarea>
+            <button type="submit" onClick="sendEmail(event)">Wyślij</button>
+        </form>
+    </div>
+</div>
+  
+</body>
+</html>

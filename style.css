@@ -86,3 +86,9 @@ select{
 .copyButton{
   width: 33%
 }
+#fedbackTextarea{
+  height:30vh;
+}
+a{
+  background-color: #F4F1E5;
+}
