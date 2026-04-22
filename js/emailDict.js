@@ -44,7 +44,7 @@
         "mezczyzna":
           [],
         "kobieta":
-          ["paulina.matysiak@sejm.pl", "marta.stozek@sejm.pl", " kontakt@martastozek.pl", "marcelina.zawisza@sejm.pl", " biuro@marcelinazawisza.pl"]
+          ["paulina.matysiak@sejm.pl", "marta.stozek@sejm.pl", " kontakt@martastozek.pl"] //, "marcelina.zawisza@sejm.pl", " biuro@marcelinazawisza.pl"
       },
       "NOWA LEWICA": {
         "mezczyzna":[
