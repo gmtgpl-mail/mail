@@ -44,8 +44,8 @@ function loadContent() {
       </select>
     </div>
     Do ilu osób wysłać mail?:
-    <input type="range" min="3" max="50" value=25 id="ileMaili" oninput="this.nextElementSibling.value = this.value">
-    <output id="ileMailiOutput">25</output> 
+    <input type="range" min="3" max="100" value=100 id="ileMaili" oninput="this.nextElementSibling.value = this.value">
+    <output id="ileMailiOutput">100</output> 
     Niektóre maile mogą być nie poprawne, jeśli dostaniesz odpowiedź "nie znaleziono adresu", daj nam znać.
     <button onclick="sendFunction()">wyślij</button><br>
     <form autocomplete="off">
