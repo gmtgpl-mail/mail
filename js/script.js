@@ -24,12 +24,12 @@ function loadContent() {
     document.getElementById("body").innerHTML = 
     `
   <div id="header">
-    <img id="logo" src="../img/logo/logo_black_en.png">
+    <img id="logo" src="../../img/logo/logo_black_en.png">
   </div>
   <div id="content">
     <nobr>
-        <a href="../">strona główna</a>
-        <a href="../feedback/">wyślij nam feedback</a>
+        <a href="../../">strona główna</a>
+        <a href="../../feedback/">wyślij nam feedback</a>
     </nobr>
     <form autocomplete="off">
 
@@ -43,9 +43,9 @@ function loadContent() {
       <select id="funkcja" onchange="changeMailContent()">
       </select>
     </div>
-    Do ilu osób wysłać mail?:
-    <input type="range" min="3" max="100" value=100 id="ileMaili" oninput="this.nextElementSibling.value = this.value">
-    <output id="ileMailiOutput">100</output> 
+    Do ilu osób wysłać mail?: (pole wyłączone, piszemy do 20 osób)
+    <input type="range" min="20" max="20" value=20 id="ileMaili" oninput="this.nextElementSibling.value = this.value">
+    <output id="ileMailiOutput">20</output> 
     Niektóre maile mogą być nie poprawne, jeśli dostaniesz odpowiedź "nie znaleziono adresu", daj nam znać.
     <button onclick="sendFunction()">wyślij</button><br>
     <form autocomplete="off">
