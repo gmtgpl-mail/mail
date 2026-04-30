@@ -35,7 +35,7 @@ function loadContent() {
 
     Tytuł maila:<input type="text" name="tytul" id="tytulMaila" class="formInput" readonly>
     </form>
-    Imię do podpisu :<input type="text" name="podpis" id="podpisMaila" class="formInput" oninput="changeMailContent()">
+    Imię i Nazwisko do podpisu :<input type="text" name="podpis" id="podpisMaila" class="formInput" oninput="changeMailContent()">
     <div id="divGrupa">
       Wyślij do osób należących do (odznacz te grupy do których nie chcesz wysyłać maili):<br>
       <div id="groupChoice"></div>
