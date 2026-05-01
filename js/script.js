@@ -25,7 +25,7 @@ function loadContent() {
         <a href="../../">main page</a>
         <a href="../../feedback/">send us feedback</a>`
         mailTitleFldTxt = "Mail title"
-        nameFldTxt = "Name and Surname for the signature"
+        nameFldTxt = "Full name for the signature"
         groupChoiceFldTxt = "Send to people from groups (uncheck these groups to whom You don't want to send emails)"
         pronounChoiceFldTxt = "Who are a"
         howManyEmailsFldTxt = "how many recipients?"
