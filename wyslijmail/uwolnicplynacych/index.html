@@ -5,17 +5,21 @@
   <title>wyślij maila</title>
   <link rel="stylesheet" href="../../style.css">
   <script>
-    const tytuly = ["Obywatele Polski porwani", "Izrael znowu porywa" ,"Żądamy interwencji"];
-    pierwszeZdania = {
+    const language = 'pl'
+    maxNumOfRecipients = 21
+    defaultNumOfRecipients = 20
+    minNumOfRecipients = 21
+    const titles = ["Obywatele Polski porwani", "Izrael znowu porywa" ,"Żądamy interwencji"];
+    firstSentences = {
       "europosel": "Szanowny Panie europośle,",
       "mezczyzna": "Szanowny Panie Pośle,",
       "kobieta": "Szanowna Pani Posłanko,",
       "wszyscy": "Szanowni Państwo, Szanowny Panie Ministrze"
     }
-    const akapity1 = [
+    const paragraphs = [[
 `
-W nocy z 29 na 30 kwietnia 2026 roku Izrael dokonał nielegalnego przechwycenia 21 łodzi pokojowej misji Global Sumud Flotilla i uszkodzenia jednej. Porywając tym samym 175 osób, do czego przyznało się IMFA. Dokonał tego nielegalnie na wodach międzynarodowych u wybrzeży Grecji. Przechwycono 21 łodzi, w tym również ta, na której płynęła polska delegatka  Magdalena Anna Górska. Jako minister spraw zagranicznych Rzeczypospolitej Polskiej ma Pan obowiązek zapewnić im bezpieczeństwo, a My jako obywatele mamy prawo się tego domagać i rozliczyć Pana z podjętych działań. `]
-    const akapity2 = [
+W nocy z 29 na 30 kwietnia 2026 roku Izrael dokonał nielegalnego przechwycenia 21 łodzi pokojowej misji Global Sumud Flotilla i uszkodzenia jednej. Porywając tym samym 175 osób, do czego przyznało się IMFA. Dokonał tego nielegalnie na wodach międzynarodowych u wybrzeży Grecji. Przechwycono 21 łodzi, w tym również ta, na której płynęła polska delegatka  Magdalena Anna Górska. Jako minister spraw zagranicznych Rzeczypospolitej Polskiej ma Pan obowiązek zapewnić im bezpieczeństwo, a My jako obywatele mamy prawo się tego domagać i rozliczyć Pana z podjętych działań. `],
+[
 `Żądamy formalnie, aby ministerstwo:
 
 1. Wystosowało oficjalne i publiczne oświadczenie dyplomatyczne do rządu Izraela, potwierdzające humanitarny charakter Globalnej Flotylli Sumud oraz domagające się nieingerencji w sprawy jej statków i pasażerów.
@@ -26,9 +30,9 @@ będzie traktowane jako naruszenie prawa międzynarodowego, powodujące zaistnie
 5. Zdecydowanie odrzuciło wszelkie starania Izraela dotyczące rozszerzenia swojej jurysdykcji egzekucyjnej na wody terytorialne międzynarodowe lub palestyńskie, ponieważ takie działania stanowią naruszenie Konwencji genewskiej z 1958 r. o morzu terytorialnym, 
 UNCLOS, art. 2 ust. 4 Karty Narodów Zjednoczonych oraz art. 15 Podręcznika z San Remo.
 6. Wsparło ustanowienie korytarza humanitarnego zapewniającego głodzonej Gazie niezbędnej pomocy. 
-`]
-    const podpisPoczatek = "\nZ poważaniem\n"
-    const poczatki = {
+`]]
+    const signatureBegining = "\nZ poważaniem\n"
+    const pronouns = {
       "wszyscy": "wszyscy"
       // "mezczyzna": "mężczyzną",
       // "kobieta": "kobietą",

@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>set your page title here</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script>
+    /*
+      --- Parameters ---
+      there are 9 parameters that You need to set for the website to work properly.
+      titles, maxNumOfRecipients, defaultNumOfRecipients, minNumOfRecipients, firstSentences, paragraphs, signatureBegining, pronouns and email_dict.
+        titles - a list of strings - the randomized titles are chosen from this list.
+        firstSentences - dictionary of strings, addressed by gender - the beginings of the mail (such as "dear miss", "dear mister")
+        paragraphs - list of list of long strings (You have to use these `` brackets) - the content of the mail is generated using these. The generating process will be explained shortly
+        signatureBegining - string - the begining of the signature
+        pronouns - dictionary - the key is the value tha will be used in the code (has to match the keys in other dictionarie), the value is what will be displayed in the dropdown menu
+        email_dict - dictionary of dictionaries of strings - 
+            My advice is to put this variable in a separate file, as it's big and doesn't change much.
+            the outer dictionarys keys are the names of groups of people You want to distinguish between. I intended for the split to be different political parties, but You can choose whoever You want.
+            The inner dictionarys keys are the different sets of pronouns.
+        maxNumOfRecipients, defaultNumOfRecipients, minNumOfRecipients - intigers - they set the parameters for the slider
+      
+      --- How does the website work? ---
+      When a user loads the site, they're met with a simple form and a couple buttons.
+      The form has 3 text inputs, title, name and mail content.
+        The title field is read only and contains the title randomly chosen from the titles parameter. This will be the title of the email sent
+        The name field is an input for the name of the person sending. The contents of this field gets automatically apended to the end of the email.
+        The mail content is a textarea containing the randomized contents of the email.
+          The randomization works in such a way:
+            the program iterates through the lists in the paragraphs list and chooses a random element of each list in order. 
+            It's important that the elements of the lists are interchangable, so it's best if they're paraphrases of each other.
+          If You only have one version of the text it's fine to put it as one element.
+      There is a box containing the settings relating to the recipients. It has a list of all groups from the email_dict parameter and a dropdown for choosing the pronouns.
+        To the left of the name of a group is a checkbox, if it's checked then emails from this group will be added to the list from which the emails will be chosen.
+        The drop down allows for the choice of pronouns of the recipient, based on this value the first sentence of the email will be checked and the email list mentioned above will only contaign people using these pronouns.
+      Bellow that box is a slider of choice of how many emails should be chosen. If the person chooses 100, then 100 emails will be randomly chosen from the generated list and this many addresses will be added to the recipient field. If the generated list is shorter than the chosen ammount (let's say it has only 80 emails, but 100 was chosen), then all the emails from the list will be used.
+        The maximum, minimum and default values of the slider can be set by You, but remember to not set it too high, as some mailing clients block sending of emails to a high amount of recipients, the default values are max: 100, default: 100 and min: 3.
+      Above and bellow the contents text area there are 2 send buttons, these will use the browsers "mailto" link function, so they will use the default browser setting to send an email, using an application/website set in the browser settings. Every time this buttons are used a new list of email addresses si chosen and the contents of the email is randomized. This doesn't always work, in this case the bellow described buttons are used.
+      At the bottom of the website, there are three buttons "copy title", "copy text" and "copy email addreses", these buttons copy their respective email elements. In case the send button doesn't work, these are used to manually copy the elements into the users mailing app.
+        The "copy text" button additionally randomizes the contents of the email.
+        Each time the "copy emails" button is pressed the email list is randomly chosen.
+      These buttons allow the user to send the email multiple times without reloading the page and having to change the settings every time.
+
+      --- General ---
+      When it comes to the choise of the groups I added that because we decided that some people might want to not message members of certaign parties. For example the polish party "Razem" is pretty close to our cause and sometimes speak out in favor to us, so some people choose to exclude them from the list of recipients. These people can just uncheck the box left of teh "Razem" party name.
+      The pronouns here don't necesairly have to be pronouns, for example if You want to distinguish between different titles, You can use this variable to do that.
+      For example I once had a list of 20 emails of 19 men and 1 woman. I decided that it doesn't make sense to separate them into 2 groups, so I put "everyone" as the pronoun and used that everywhere.
+    */
+    const language = 'en'
+    maxNumOfRecipients = 5
+    defaultNumOfRecipients = 5
+    minNumOfRecipients = 3
+    const titles = ["example title 1", "example title 2", "different title example"];
+    firstSentences = {
+      "male": "Hello mister,",
+      "female": "Hello miss,"
+    }
+    const paragraphs = [
+        [ `first paragraph 1`,`first paragraph 2`,`first paragraph 3`],
+        [ `second paragraph 1`,`second paragraph 2`],
+    ]
+    const signatureBegining = "\nRegards,\n"
+    const pronouns = {
+      "male": "man",
+      "female": "woman"
+    }
+  </script>
+  <script type="text/javascript" src="../../js/emailDict.js"></script>
+  <script type="text/javascript" src="../../js/script.js"></script>
+</head>
+
+<body onload="loadContent()" id="body">
+  
+</body>
+</html>

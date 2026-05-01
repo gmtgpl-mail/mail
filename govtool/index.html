@@ -6,16 +6,17 @@
   <link rel="stylesheet" href="../style.css">
   <script type="text/javascript" src="../js/emailDict.js"></script>
   <script>
-    const tytuly = ["tytul 1", "tytul 2", "tytul 3", "tytul 4", "tytul 5"];
-    pierwszeZdania = {
+    const language = 'pl'
+    const titles = ["tytul 1", "tytul 2", "tytul 3", "tytul 4", "tytul 5"];
+    firstSentences = {
       "europosel":"Szanowny Panie europośle,",
       "mezczyzna": "Szanowny Panie,",
       "kobieta": "Szanowna Pani,"
     }
-    const akapity1 = ["pierwszy akapit 1","pierwszy akapit 2","pierwszy akapit 3","pierwszy akapit 4","pierwszy akapit 5"]
-    const akapity2 = ["drugi akapit 1","drugi akapit 2","drugi akapit 3","drugi akapit 4","drugi akapit 5"]
-    const podpisPoczatek = "\nZ poważaniem,\n"
-    const poczatki = {
+    const paragraphs1 = ["pierwszy akapit 1","pierwszy akapit 2","pierwszy akapit 3","pierwszy akapit 4","pierwszy akapit 5"]
+    const paragraphs2 = ["drugi akapit 1","drugi akapit 2","drugi akapit 3","drugi akapit 4","drugi akapit 5"]
+    const signatureBegining = "\nZ poważaniem,\n"
+    const pronouns = {
       "mezczyzna": "mężczyzną",
       "kobieta": "kobietą",
       "europosel": "europosłem"
@@ -47,9 +48,9 @@
     }
     function changeEmailCheckboxByParty(partia){
         val = document.getElementById(partia).checked
-        funkcja = document.getElementById("funkcja").value
-        Object.keys(email_dict[partia][funkcja]).forEach(function(emailId){
-            email = email_dict[partia][funkcja][emailId]
+        pronoun = document.getElementById("pronoun").value
+        Object.keys(email_dict[partia][pronoun]).forEach(function(emailId){
+            email = email_dict[partia][pronoun][emailId]
             document.getElementById(email).checked = val
         })
     }
@@ -57,18 +58,18 @@
         email_sent_to.forEach(function(values){
           partia = values[0]
           email = values[1]
-          if(email_dict[partia][funkcja].includes(email)){
-            email_dict[partia][funkcja].splice(email_dict[partia][funkcja].indexOf(email),1)
+          if(email_dict[partia][pronoun].includes(email)){
+            email_dict[partia][pronoun].splice(email_dict[partia][pronoun].indexOf(email),1)
           }
         })
         email_sent_to = []
-        funkcja = document.getElementById("funkcja").value
+        pronoun = document.getElementById("pronoun").value
         choiceStr = ""
         Object.keys(email_dict).forEach(function(partia){
             choiceStr+="<hr><input type=\"checkbox\" id=\""+partia+"\" onchange=\"changeEmailCheckboxByParty(\'"+partia+"\')\" checked>"+partia+"<div>"
-            if(funkcja in email_dict[partia]){
-              Object.keys(email_dict[partia][funkcja]).forEach(function(emailId){
-                  email = email_dict[partia][funkcja][emailId]
+            if(pronoun in email_dict[partia]){
+              Object.keys(email_dict[partia][pronoun]).forEach(function(emailId){
+                  email = email_dict[partia][pronoun][emailId]
                   choiceStr+="<input type=\"checkbox\" id=\""+email+"\" class=\"emailCheckbox\" partia=\""+partia+"\" checked>"+email
               })
             }
@@ -78,13 +79,13 @@
     }
     function loadContent() {
         selectPoczatekStr = "";
-        Object.keys(poczatki).forEach(function(key){
-            selectPoczatekStr += "<option value=\""+key+"\">"+poczatki[key]+"</option>"
+        Object.keys(pronouns).forEach(function(key){
+            selectPoczatekStr += "<option value=\""+key+"\">"+pronouns[key]+"</option>"
         });
-        document.getElementById('funkcja').innerHTML = selectPoczatekStr
-        pierwszeZdanie = pierwszeZdania[document.getElementById('funkcja').value]+"\n"
+        document.getElementById('pronoun').innerHTML = selectPoczatekStr
+        pierwszeZdanie = firstSentences[document.getElementById('pronoun').value]+"\n"
         loadEmails()
-        document.getElementById("trescMaila").innerHTML = "";
+        document.getElementById("mailContent").innerHTML = "";
     }
     function getEmailStr(){
         const emailCheckboxes = document.getElementsByClassName("emailCheckbox");
@@ -102,7 +103,7 @@
             return ("")
         }
         addressCount = Math.min(emailLst.length -1, document.getElementById('ileAdresow').value-1)
-        funkcja = document.getElementById("funkcja").value
+        pronoun = document.getElementById("pronoun").value
         shrEmailLst = []
         for (let i = 0; i<= addressCount; i++){
             shrEmailLst[i] = emailLst[i]
@@ -125,7 +126,7 @@
         }
         
         tytul = encodeURIComponent(document.getElementById("tytulMaila").value);
-        tekst = encodeURIComponent(document.getElementById("trescMaila").value);
+        tekst = encodeURIComponent(document.getElementById("mailContent").value);
         url = 'mailto:'+emailStr+'?subject=' + tytul + '&body=' + tekst
         navigator.clipboard.writeText(url)
         window.open(url);
@@ -136,7 +137,7 @@
     }
     function copyTekst(event){
         event.preventDefault()
-        navigator.clipboard.writeText(document.getElementById('trescMaila').value);
+        navigator.clipboard.writeText(document.getElementById('mailContent').value);
     }
     function copyAddresses(event){
         event.preventDefault()
@@ -166,11 +167,11 @@
 
     </div>
 <form>
-<div id="divGrupa">
+<div id="divGroup">
     Zaznacz maile:<br>
     <div id="groupChoice"></div>
     Które są:
-    <select id="funkcja" onchange="loadEmails()">
+    <select id="pronoun" onchange="loadEmails()">
     </select>
 </div>
     Na ile adresów wysłać maila?:<input type="number" name="ileAdresow" id="ileAdresow" class="formInput" min="0" max="100" value="100">
@@ -179,7 +180,7 @@
 <button onclick="sendFunction(event)">wyślij</button><br>
 
 Treść:
-<textarea type="text" name="tresc" id="trescMaila">
+<textarea type="text" name="content" id="mailContent">
 </textarea><br><br>
 </form>
 <button onclick="sendFunction(event)">wyślij</button><hr>
