@@ -1,5 +1,5 @@
 email_dict = {
-    "Ambasada węgier": {
+    "Ambasada Szwecji": {
         "wszyscy": ["ambassaden.warszawa@gov.se"]
     }
 }
