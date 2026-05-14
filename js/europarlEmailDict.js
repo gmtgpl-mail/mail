@@ -1,0 +1,13 @@
+
+
+
+email_dict = {
+    "europarlament":{
+        "mezczyzna":[
+            "kontakt@arlukowicz.pl", " bartosz.arlukowicz@europarl.europa.eu", " bartoszadam.arlukowicz@europarl.europa.eu", "robert.biedron@europarl.europa.eu", "adam.bielan@europarl.europa.eu", "tobiasz.bochenski@europarl.europa.eu", "grzegorz.braun@europarl.europa.eu", "krzysztof.brejza@europarl.europa.eu", "joachim.brudzinski@europarl.europa.eu", "tomasz.buczek@europarl.europa.eu", "waldemar.buda@europarl.europa.eu", "poczta@borysbudka.pl", " borys.budka@europarl.europa.eu", "andrzej.bula@europarl.europa.eu", "michal.dworczyk@europarl.europa.eu", " m.dworczyk@wp.pl", "andrzej@halicki.pl", " andrzej.halicki@europarl.europa.eu", "krzysztofandrzej.hetman@europarl.europa.eu", " krzysztof.hetman@europarl.europa.eu", "patrykjaki.kraj@gmail.com", " patryktomasz.jaki@europarl.europa.eu", "dariusz.jonski@europarl.europa.eu", "mariusz.kaminski@europarl.europa.eu", "michal.kobosko@europarl.europa.eu", "lukasz.kohut@gmail.com", " lukasz.kohut@europarl.europa.eu", "janusz.lewandowski@europarl.europa.eu", "arkadiusz.mularczyk@europarl.europa.eu", "piotr.muller@europarl.europa.eu", "daniel.obajtek@europarl.europa.eu", " kontakt@daniel-obajtek.pl", "jacek.ozdoba@europarl.europa.eu", "jacek.protas@europarl.europa.eu", "bogdan.rzonca@europarl.europa.eu", "bartlomiej.sienkiewicz@europarl.europa.eu", "marcin.sypniewski@europarl.europa.eu", "michal.szczerba@europarl.europa.eu", "dominik.tarczynski@europarl.europa.eu", "stanislaw.tyszka@europarl.europa.eu", "michal.wawrykiewicz@europarl.europa.eu", "wybory@kosmazlotowski.pl", " kosmatadeusz.zlotowski@europarl.europa.eu"
+        ],
+        "kobieta":[
+            "biuro@adamowiczmagdalena.pl", " magdalena.adamowicz@europarl.europa.eu", "anna.brylka@europarl.europa.eu", "kamila.gasiuk-pihowicz@europarl.europa.eu", "biuro@malgorzatagosiewska.pl", " malgorzata.gosiewska@europarl.europa.eu", "hanna.gronkiewicz-waltz@europarl.europa.eu", "biuro.ewy.kopacz@wp.pl", " ewa.kopacz@europarl.europa.eu", "elzbieta.lukacijewska@europarl.europa.eu", "marlena.malag@europarl.europa.eu", "jagna.marczulajtis-walczak@europarl.europa.eu", "miroslawa.nykiel@europarl.europa.eu", "joanna.scheuring-wielgus@europarl.europa.eu", "beata.szydlo@europarl.europa.eu", "marta.wcislo@europarl.europa.eu", "jadwiga.wisniewska@europarl.europa.eu", "ewa.zajaczkowska-hernik@europarl.europa.eu", "anna.zalewska@europarl.europa.eu"
+        ]
+    }
+}
