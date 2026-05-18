@@ -1,6 +1,6 @@
 var email_dict = {
-  "Finland": {
-    "male": [
+  "Finlandia": {
+    "mezczyzna": [
       "mika.aaltola@europarl.europa.eu",
       "eero.heinaluoma@europarl.europa.eu",
       "katri.kulmuni@europarl.europa.eu",
@@ -9,7 +9,7 @@ var email_dict = {
       "pekka.toveri@europarl.europa.eu",
       "sebastian.tynkkynen@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "li.andersson@europarl.europa.eu",
       "maria.guzenina@europarl.europa.eu",
       "anna-maja.henriksson@europarl.europa.eu",
@@ -20,8 +20,8 @@ var email_dict = {
       "aura.salla@europarl.europa.eu"
     ]
   },
-  "Spain": {
-    "female": [
+  "Hiszpania": {
+    "kobieta": [
       "maravillas.abadiajover@europarl.europa.eu",
       "oihane.agirregoitiamartinez@europarl.europa.eu",
       "laura.ballarincereza@europarl.europa.eu",
@@ -53,7 +53,7 @@ var email_dict = {
       "isabel.serrasanchez@europarl.europa.eu",
       "susana.solisperez@europarl.europa.eu"
     ],
-    "male": [
+    "mezczyzna": [
       "pablo.ariasecheverria@europarl.europa.eu",
       "jaume.asens@europarl.europa.eu",
       "pernando.barrena@europarl.europa.eu",
@@ -86,8 +86,8 @@ var email_dict = {
       "juanignacio.zoidoalvarez@europarl.europa.eu"
     ]
   },
-  "Poland": {
-    "female": [
+  "Polska": {
+    "kobieta": [
       "magdalena.adamowicz@europarl.europa.eu",
       "anna.brylka@europarl.europa.eu",
       "kamila.gasiuk-pihowicz@europarl.europa.eu",
@@ -105,7 +105,7 @@ var email_dict = {
       "ewa.zajaczkowska-hernik@europarl.europa.eu",
       "anna.zalewska@europarl.europa.eu"
     ],
-    "male": [
+    "mezczyzna": [
       "bartosz.arlukowicz@europarl.europa.eu",
       "robert.biedron@europarl.europa.eu",
       "adam.bielan@europarl.europa.eu",
@@ -145,8 +145,8 @@ var email_dict = {
       "kosma.zlotowski@europarl.europa.eu"
     ]
   },
-  "Greece": {
-    "male": [
+  "Grecja": {
+    "mezczyzna": [
       "georgios.aftias@europarl.europa.eu",
       "galato.alexandraki@europarl.europa.eu",
       "nikolaos.anadiotis@europarl.europa.eu",
@@ -164,7 +164,7 @@ var email_dict = {
       "nikolaos.pappas@europarl.europa.eu",
       "dimitrios.tsiodras@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "elena.kountoura@europarl.europa.eu",
       "afroditi.latinopoulou@europarl.europa.eu",
       "eleonora.meleti@europarl.europa.eu",
@@ -173,19 +173,19 @@ var email_dict = {
     ]
   },
   "Malta": {
-    "male": [
+    "mezczyzna": [
       "peter.agius@europarl.europa.eu",
       "alex.agiussaliba@europarl.europa.eu",
       "daniel.attard@europarl.europa.eu",
       "thomas.bajada@europarl.europa.eu",
       "david.casa@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "roberta.metsola@europarl.europa.eu"
     ]
   },
-  "France": {
-    "male": [
+  "Francja": {
+    "mezczyzna": [
       "gregory.allione@europarl.europa.eu",
       "jordan.bardella@europarl.europa.eu",
       "nicolas.bay@europarl.europa.eu",
@@ -229,7 +229,7 @@ var email_dict = {
       "matthieu.valet@europarl.europa.eu",
       "alexandre.varaut@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "mathilde.androuet@europarl.europa.eu",
       "manon.aubry@europarl.europa.eu",
       "marie-luce.brasier-clain@europarl.europa.eu",
@@ -271,8 +271,8 @@ var email_dict = {
       "stephanie.yon@europarl.europa.eu"
     ]
   },
-  "Sweden": {
-    "female": [
+  "Szwecja": {
+    "kobieta": [
       "abir.alsahlani@europarl.europa.eu",
       "sofie.eriksson@europarl.europa.eu",
       "helene.fritzon@europarl.europa.eu",
@@ -287,7 +287,7 @@ var email_dict = {
       "beatrice.timgren@europarl.europa.eu",
       "emma.wiesner@europarl.europa.eu"
     ],
-    "male": [
+    "mezczyzna": [
       "johan.danielsson@europarl.europa.eu",
       "adnan.dibrani@europarl.europa.eu",
       "dick.erixon@europarl.europa.eu",
@@ -298,8 +298,8 @@ var email_dict = {
       "charlie.weimers@europarl.europa.eu"
     ]
   },
-  "Germany": {
-    "female": [
+  "Niemcy": {
+    "kobieta": [
       "christine.anderson@europarl.europa.eu",
       "anja.arndt@europarl.europa.eu",
       "katarina.barley@europarl.europa.eu",
@@ -335,7 +335,7 @@ var email_dict = {
       "marionerika.walsmann@europarl.europa.eu",
       "andrea.wechsler@europarl.europa.eu"
     ],
-    "male": [
+    "mezczyzna": [
       "rasmus.andresen@europarl.europa.eu",
       "rene.aust@europarl.europa.eu",
       "stefan.berger@europarl.europa.eu",
@@ -400,8 +400,8 @@ var email_dict = {
       "tiemo.woelken@europarl.europa.eu"
     ]
   },
-  "Ireland": {
-    "male": [
+  "Irlandia": {
+    "mezczyzna": [
       "barry.andrews@europarl.europa.eu",
       "barry.cowen@europarl.europa.eu",
       "lukeming.flanagan@europarl.europa.eu",
@@ -411,7 +411,7 @@ var email_dict = {
       "ciaran.mullooly@europarl.europa.eu",
       "aodhan.oriordain@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "lynn.boylan@europarl.europa.eu",
       "nina.carberry@europarl.europa.eu",
       "regina.doherty@europarl.europa.eu",
@@ -420,8 +420,8 @@ var email_dict = {
       "maria.walsh@europarl.europa.eu"
     ]
   },
-  "Netherlands": {
-    "female": [
+  "Holandia": {
+    "kobieta": [
       "mieke.andriese@europarl.europa.eu",
       "jeannettenicole.baljeu@europarl.europa.eu",
       "rachel.blom@europarl.europa.eu",
@@ -440,7 +440,7 @@ var email_dict = {
       "Catarina.VIEIRA@europarl.europa.eu",
       "lara.wolters@europarl.europa.eu"
     ],
-    "male": [
+    "mezczyzna": [
       "malik.azmani@europarl.europa.eu",
       "mohammed.chahim@europarl.europa.eu",
       "ton.diepeveen@europarl.europa.eu",
@@ -457,8 +457,8 @@ var email_dict = {
       "auke.zijlstra@europarl.europa.eu"
     ]
   },
-  "Lithuania": {
-    "male": [
+  "Litwa": {
+    "mezczyzna": [
       "vytenis.andriukaitis@europarl.europa.eu",
       "petras.austrevicius@europarl.europa.eu",
       "petras.grazulis@europarl.europa.eu",
@@ -469,25 +469,25 @@ var email_dict = {
       "aurelijus.veryga@europarl.europa.eu",
       "dainius.zalimas@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "vilija.blinkeviciute@europarl.europa.eu",
       "rasa.jukneviciene@europarl.europa.eu"
     ]
   },
-  "Luxembourg": {
-    "male": [
+  "Luksemburg": {
+    "mezczyzna": [
       "marc.angel@europarl.europa.eu",
       "charles.goerens@europarl.europa.eu",
       "fernand.kartheiser@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "martine.kemp@europarl.europa.eu",
       "tilly.metz@europarl.europa.eu",
       "isabel.wiseler@europarl.europa.eu"
     ]
   },
-  "Belgium": {
-    "male": [
+  "Belgia": {
+    "mezczyzna": [
       "gerolf.annemans@europarl.europa.eu",
       "pascal.arimont@europarl.europa.eu",
       "wouter.beke@europarl.europa.eu",
@@ -502,7 +502,7 @@ var email_dict = {
       "johan.vanovertveldt@europarl.europa.eu",
       "yvan.verougstraete@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "barbara.bonte@europarl.europa.eu",
       "saskia.bricmont@europarl.europa.eu",
       "estelle.ceulemans@europarl.europa.eu",
@@ -514,8 +514,8 @@ var email_dict = {
       "sophie.wilmes@europarl.europa.eu"
     ]
   },
-  "Italy": {
-    "female": [
+  "W\u0142ochy": {
+    "kobieta": [
       "lucia.annunziata@europarl.europa.eu",
       "susanna.ceccardi@europarl.europa.eu",
       "caterina.chinnici@europarl.europa.eu",
@@ -543,7 +543,7 @@ var email_dict = {
       "georgia.tramacere@europarl.europa.eu",
       "mariateresa.vivaldini@europarl.europa.eu"
     ],
-    "male": [
+    "mezczyzna": [
       "giuseppe.antoci@europarl.europa.eu",
       "brando.benifei@europarl.europa.eu",
       "sergio.berlato@europarl.europa.eu",
@@ -596,8 +596,8 @@ var email_dict = {
       "nicola.zingaretti@europarl.europa.eu"
     ]
   },
-  "Portugal": {
-    "male": [
+  "Portugalia": {
+    "mezczyzna": [
       "francisco.assis@europarl.europa.eu",
       "sebastiao.bugalho@europarl.europa.eu",
       "joao.cotrim@europarl.europa.eu",
@@ -612,7 +612,7 @@ var email_dict = {
       "helder.sousasilva@europarl.europa.eu",
       "antonio.tangercorrea@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "isilda.gomes@europarl.europa.eu",
       "catarina.martins@europarl.europa.eu",
       "anacatarina.mendes@europarl.europa.eu",
@@ -623,8 +623,8 @@ var email_dict = {
       "ana.vasconcelos@europarl.europa.eu"
     ]
   },
-  "Romania": {
-    "male": [
+  "Rumunia": {
+    "mezczyzna": [
       "adrian-george.axinia@europarl.europa.eu",
       "dan.barna@europarl.europa.eu",
       "adrian-dragos.benea@europarl.europa.eu",
@@ -652,7 +652,7 @@ var email_dict = {
       "lorant.vincze@europarl.europa.eu",
       "iuliu.winkler@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "vasile.dincu@europarl.europa.eu",
       "gabriela.firea@europarl.europa.eu",
       "maria.grapini@europarl.europa.eu",
@@ -662,8 +662,8 @@ var email_dict = {
       "adina.valean@europarl.europa.eu"
     ]
   },
-  "Croatia": {
-    "male": [
+  "Chorwacja": {
+    "mezczyzna": [
       "stephennikola.bartulica@europarl.europa.eu",
       "gordan.bosanac@europarl.europa.eu",
       "tonino.picula@europarl.europa.eu",
@@ -672,7 +672,7 @@ var email_dict = {
       "davorivo.stier@europarl.europa.eu",
       "marko.vesligaj@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "biljana.borzan@europarl.europa.eu",
       "nikolina.brnjac@europarl.europa.eu",
       "suncana.glavak@europarl.europa.eu",
@@ -680,8 +680,8 @@ var email_dict = {
       "zeljana.zovko@europarl.europa.eu"
     ]
   },
-  "Czech Republic": {
-    "female": [
+  "Czechy": {
+    "kobieta": [
       "nikola.bartusek@europarl.europa.eu",
       "klara.dostalova@europarl.europa.eu",
       "marketa.gregorova@europarl.europa.eu",
@@ -691,7 +691,7 @@ var email_dict = {
       "jaroslava.pokornajermanova@europarl.europa.eu",
       "veronika.vrecionova@europarl.europa.eu"
     ],
-    "male": [
+    "mezczyzna": [
       "jaroslav.bzoch@europarl.europa.eu",
       "ivan.david@europarl.europa.eu",
       "ondrej.dostal@europarl.europa.eu",
@@ -707,8 +707,8 @@ var email_dict = {
       "tomas.zdechovsky@europarl.europa.eu"
     ]
   },
-  "Slovakia": {
-    "female": [
+  "S\u0142owacja": {
+    "kobieta": [
       "monika.benova@europarl.europa.eu",
       "veronika.ostrihonova@europarl.europa.eu",
       "lubica.karvasova@europarl.europa.eu",
@@ -717,7 +717,7 @@ var email_dict = {
       "katarina.roth@europarl.europa.eu",
       "lucia.yar@europarl.europa.eu"
     ],
-    "male": [
+    "mezczyzna": [
       "lubos.blaha@europarl.europa.eu",
       "martin.hojsik@europarl.europa.eu",
       "erik.kalinak@europarl.europa.eu",
@@ -729,7 +729,7 @@ var email_dict = {
     ]
   },
   "Austria": {
-    "male": [
+    "mezczyzna": [
       "alexander.bernhuber@europarl.europa.eu",
       "helmut.brandstaetter@europarl.europa.eu",
       "roman.haider@europarl.europa.eu",
@@ -743,7 +743,7 @@ var email_dict = {
       "harald.vilimsky@europarl.europa.eu",
       "thomas.waitz@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "elisabeth.dieringer@europarl.europa.eu",
       "elisabeth.grossmann@europarl.europa.eu",
       "sophia.kircher@europarl.europa.eu",
@@ -754,8 +754,8 @@ var email_dict = {
       "angelika.winzig@europarl.europa.eu"
     ]
   },
-  "Denmark": {
-    "female": [
+  "Dania": {
+    "kobieta": [
       "majbritt.birkholm@europarl.europa.eu",
       "stine.bosse@europarl.europa.eu",
       "sigrid.friis@europarl.europa.eu",
@@ -763,7 +763,7 @@ var email_dict = {
       "christel.schaldemose@europarl.europa.eu",
       "marianne.vind@europarl.europa.eu"
     ],
-    "male": [
+    "mezczyzna": [
       "asger.christensen@europarl.europa.eu",
       "per.clausen@europarl.europa.eu",
       "henrik.dahl@europarl.europa.eu",
@@ -776,8 +776,8 @@ var email_dict = {
       "kristoffer.storm@europarl.europa.eu"
     ]
   },
-  "Hungary": {
-    "female": [
+  "W\u0119gry": {
+    "kobieta": [
       "zsuzsanna.borvendeg@europarl.europa.eu",
       "dora.david@europarl.europa.eu",
       "klara.dobrev@europarl.europa.eu",
@@ -789,7 +789,7 @@ var email_dict = {
       "eszter.lakos@europarl.europa.eu",
       "annamaria.vicsek@europarl.europa.eu"
     ],
-    "male": [
+    "mezczyzna": [
       "tamas.deutsch@europarl.europa.eu",
       "csaba.domotor@europarl.europa.eu",
       "andras.gyurk@europarl.europa.eu",
@@ -801,8 +801,8 @@ var email_dict = {
       "pal.szekeres@europarl.europa.eu"
     ]
   },
-  "Cyprus": {
-    "male": [
+  "Cypr": {
+    "mezczyzna": [
       "loucas.fourlas@europarl.europa.eu",
       "geadis.geadi@europarl.europa.eu",
       "giorgos.georgiou@europarl.europa.eu",
@@ -810,10 +810,10 @@ var email_dict = {
       "costas.mavrides@europarl.europa.eu",
       "fidias.panayiotou@europarl.europa.eu"
     ],
-    "female": []
+    "kobieta": []
   },
-  "Slovenia": {
-    "male": [
+  "S\u0142owenia": {
+    "mezczyzna": [
       "branko.grims@europarl.europa.eu",
       "matjaz.nemec@europarl.europa.eu",
       "vladimir.prebilic@europarl.europa.eu",
@@ -821,14 +821,14 @@ var email_dict = {
       "matej.tonin@europarl.europa.eu",
       "milan.zver@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "irena.joveva@europarl.europa.eu",
       "zala.tomasic@europarl.europa.eu",
       "romana.tomc@europarl.europa.eu"
     ]
   },
-  "Latvia": {
-    "male": [
+  "\u0141otwa": {
+    "mezczyzna": [
       "ivars.ijabs@europarl.europa.eu",
       "rihards.kols@europarl.europa.eu",
       "vilis.kristopans@europarl.europa.eu",
@@ -837,13 +837,13 @@ var email_dict = {
       "nils.usakovs@europarl.europa.eu",
       "roberts.zile@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "sandra.kalniete@europarl.europa.eu",
       "inese.vaidere@europarl.europa.eu"
     ]
   },
-  "Bulgaria": {
-    "male": [
+  "Bu\u0142garia": {
+    "mezczyzna": [
       "taner.kabilov@europarl.europa.eu",
       "radan.kanev@europarl.europa.eu",
       "andrey.kovatchev@europarl.europa.eu",
@@ -858,7 +858,7 @@ var email_dict = {
       "kristian.vigenin@europarl.europa.eu",
       "petar.volgin@europarl.europa.eu"
     ],
-    "female": [
+    "kobieta": [
       "rada.laykova@europarl.europa.eu",
       "eva.maydell@europarl.europa.eu",
       "tsvetelina.penkova@europarl.europa.eu",
@@ -866,11 +866,11 @@ var email_dict = {
     ]
   },
   "Estonia": {
-    "female": [
+    "kobieta": [
       "marina.kaljurand@europarl.europa.eu",
       "jana.toom@europarl.europa.eu"
     ],
-    "male": [
+    "mezczyzna": [
       "sven.mikser@europarl.europa.eu",
       "urmas.paet@europarl.europa.eu",
       "juri.ratas@europarl.europa.eu",
