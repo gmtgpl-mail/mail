@@ -51,7 +51,7 @@
           "wlodzimierz@czarzasty.pl", " wlodzimierz.czarzasty@sejm.pl", "czerniakjacek@wp.pl", " jacek.czerniak@sejm.pl", "krzysztof.gawkowski@sejm.pl", "piotr.kowal@sejm.pl", "marcin.kulasek@sejm.pl", "lukasz.litewka@sejm.pl", "arkadiusz.sikora@sejm.pl", "wieslaw.szczepanski@sejm.pl", "andrzej.szejna@sejm.pl", "tadeusz.tomaszewski@sejm.pl", "tomasz.trela@sejm.pl", "dariusz.wieczorek@sejm.pl", "maciej.kopiec@senat.pl", "senkarpinski@gmail.com", "senatorkonieczny@gmail.com", "waldemar.witkowski@senat.pl", " witkowski.poznan@gmail.com", "biuro.senat.wozniak@wp.pl"
         ],
         "kobieta": [
-          "joanna.wicha@sejm.pl", "katarzyna.kotula@sejm.pl", " biuro@katarzynakotula.pl", "anita.kucharska-dziedzic@sejm.pl", "wandanowicka@gmail.com", " wanda.nowicka@sejm.pl", "dorota.olko@sejm.pl", "katarzyna.ueberhan@sejm.pl", "anna.zukowska@sejm.pl", "biuro@magdalenabiejat.pl", "anna.gorska@senat.pl", " gorska.senat@gmail.com", "biuro.szmajdzinska@gmail.com"
+          "katarzyna.kotula@sejm.pl", " biuro@katarzynakotula.pl", "anita.kucharska-dziedzic@sejm.pl", "wandanowicka@gmail.com", " wanda.nowicka@sejm.pl", "katarzyna.ueberhan@sejm.pl", "anna.zukowska@sejm.pl", " gorska.senat@gmail.com", "biuro.szmajdzinska@gmail.com"
         ]
       },
       "ONZ":{
