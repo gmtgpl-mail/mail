@@ -22,8 +22,8 @@ function shuffle(array) {
 function loadContent() {
     if(language == 'en'){
         linksTxt = `
-        <a href="../../">main page</a>
-        <a href="../../feedback/">send us feedback</a>`
+        <a class="menuBtn" href="../../">main page</a>
+        <a class="menuBtn" href="../../feedback/">send us feedback</a>`
         mailTitleFldTxt = "Mail title"
         nameFldTxt = "Full name for the signature"
         groupChoiceFldTxt = "Send to people from groups (uncheck these groups to whom You don't want to send emails)"
@@ -38,8 +38,8 @@ function loadContent() {
     }
     else if(language == 'pl'){
         linksTxt = `
-        <a href="../../">strona główna</a>
-        <a href="../../feedback/">wyślij nam feedback</a>`
+        <a class="menuBtn" href="../../">strona główna</a>
+        <a class="menuBtn" href="../../feedback/">wyślij nam feedback</a>`
         mailTitleFldTxt = "Tytuł maila"
         nameFldTxt = "Imię i Nazwisko do podpisu"
         groupChoiceFldTxt = "Wyślij do osób należących do (odznacz te grupy do których nie chcesz wysyłać maili)"
