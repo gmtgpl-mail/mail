@@ -49,7 +49,7 @@ function loadContent() {
         groupChoiceFldTxt = "Wyślij do osób należących do (odznacz te grupy do których nie chcesz wysyłać maili)"
         pronounChoiceFldTxt = "Które są"
         howManyEmailsFldTxt = "Do ilu osób wysłać mail?"
-        wrongEmailNoticeTxt = 'Niektóre maile mogą być nie poprawne, jeśli dostaniesz odpowiedź "nie znaleziono adresu", daj nam znać.'
+        wrongEmailNoticeTxt = 'Niektóre maile mogą być niepoprawne, jeśli dostaniesz odpowiedź "nie znaleziono adresu", daj nam znać.'
         sendBtnTxt = "wyślij"
         contentFldTxt = "Treść"
         copyTitleBtnTxt = "kopiuj tytuł"
