@@ -1,4 +1,5 @@
 
+var repoName = 'mail'
 var mailContent = "";
 for (let i = 0; i< paragraphs.length; i++){
     mailContent += paragraphs[i][Math.floor(Math.random() * paragraphs[i].length)] + "\n"
@@ -20,10 +21,13 @@ function shuffle(array) {
     }
 }
 function loadContent() {
+    loc = window.location.href
+    move_up_by = loc.slice(loc.indexOf('/'+repoName+'/')).split('/').length-3
+    move_up_str = '../'.repeat(move_up_by)
     if(language == 'en'){
         linksTxt = `
-        <a class="menuBtn" href="../../">main page</a>
-        <a class="menuBtn" href="../../feedback/">send us feedback</a>`
+        <a class="menuBtn" href="`+move_up_str+`">main page</a>
+        <a class="menuBtn" href="`+move_up_str+`feedback/">send us feedback</a>`
         mailTitleFldTxt = "Mail title"
         nameFldTxt = "Full name for the signature"
         groupChoiceFldTxt = "Send to people from groups (uncheck these groups to whom You don't want to send emails)"
@@ -38,8 +42,8 @@ function loadContent() {
     }
     else if(language == 'pl'){
         linksTxt = `
-        <a class="menuBtn" href="../../">strona główna</a>
-        <a class="menuBtn" href="../../feedback/">wyślij nam feedback</a>`
+        <a class="menuBtn" href="`+move_up_str+`">strona główna</a>
+        <a class="menuBtn" href="`+move_up_str+`feedback/">wyślij nam feedback</a>`
         mailTitleFldTxt = "Tytuł maila"
         nameFldTxt = "Imię i Nazwisko do podpisu"
         groupChoiceFldTxt = "Wyślij do osób należących do (odznacz te grupy do których nie chcesz wysyłać maili)"
@@ -68,7 +72,7 @@ function loadContent() {
     document.getElementById("body").innerHTML = 
     `
   <div id="header">
-    <img id="logo" src="../../img/logo/logo_black_en.png">
+    <img id="logo" src="`+move_up_str+`img/logo/logo_black_en.png">
   </div>
   <div id="content">
     <nobr>`+linksTxt+`
