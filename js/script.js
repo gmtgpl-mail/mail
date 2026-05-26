@@ -69,7 +69,7 @@ function loadContent() {
     if (typeof maxNumOfRecipients === 'undefined') {
         minNumOfRecipients = 3
     }
-    document.getElementById("body").innerHTML = 
+    contentStr = 
     `
   <div id="header">
     <img id="logo" src="`+move_up_str+`img/logo/logo_black_en.png">
@@ -89,9 +89,17 @@ function loadContent() {
       <select id="pronoun" onchange="changeMailContent()">
       </select>
     </div>
-    `+howManyEmailsFldTxt+`:
-    <input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.nextElementSibling.value = this.value">
-    <output id="howManyEmailsOutput">`+defaultNumOfRecipients+`</output> 
+    `+howManyEmailsFldTxt+`:`
+    if(maxNumOfRecipients - minNumOfRecipients < 5){
+        minNumOfRecipients = maxNumOfRecipients -1
+        defaultNumOfRecipients = maxNumOfRecipients
+        contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.nextElementSibling.value = this.value" disabled>`
+    }
+    else{
+        contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.nextElementSibling.value = this.value">`
+    }
+    
+    contentStr += `<output id="howManyEmailsOutput">`+defaultNumOfRecipients+`</output> 
     `+wrongEmailNoticeTxt+`
     <button onclick="sendFunction()">`+sendBtnTxt+`</button><br>
     <form autocomplete="off">
@@ -105,6 +113,7 @@ function loadContent() {
     <button onclick="copyTekst()">`+copyContentBtnTxt+`</button>
     <button onclick="copyAddresses()">`+copyEmailsBtnTxt+`</button>
   </div>`
+    document.getElementById("body").innerHTML = contentStr
     selectPoczatekStr = "";
     Object.keys(pronouns).forEach(function(key){
         selectPoczatekStr += "<option value=\""+key+"\">"+pronouns[key]+"</option>"
