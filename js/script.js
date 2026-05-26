@@ -45,11 +45,11 @@ function loadContent() {
         <a class="menuBtn" href="`+move_up_str+`">strona główna</a>
         <a class="menuBtn" href="`+move_up_str+`feedback/">wyślij nam feedback</a>`
         mailTitleFldTxt = "Tytuł maila"
-        nameFldTxt = "Imię i Nazwisko do podpisu"
+        nameFldTxt = "Imię i nazwisko do podpisu"
         groupChoiceFldTxt = "Wyślij do osób należących do (odznacz te grupy do których nie chcesz wysyłać maili)"
         pronounChoiceFldTxt = "Które są"
         howManyEmailsFldTxt = "Do ilu osób wysłać mail?"
-        wrongEmailNoticeTxt = 'Niektóre maile mogą być niepoprawne, jeśli dostaniesz odpowiedź "nie znaleziono adresu", daj nam znać.'
+        wrongEmailNoticeTxt = 'Niektóre adresy e-maile mogą być błędne (nieaktualne), jeśli dostaniesz odpowiedź "nie znaleziono adresu", daj nam znać.'
         sendBtnTxt = "wyślij"
         contentFldTxt = "Treść"
         copyTitleBtnTxt = "kopiuj tytuł"
