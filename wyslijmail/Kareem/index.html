@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>wyślij maila</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script>
+    const language = 'pl'
+    maxNumOfRecipients = 7
+    defaultNumOfRecipients = 7
+    minNumOfRecipients = 6
+    const titles = ["UMWr nie dotrzymuje słowa?","Kareem potrzbuje pomocy.", "Aktywista niesłusznie blokowany."];
+    firstSentences = {
+      "wszyscy": `Wasza Magnificencjo,
+Szanowny Panie Ministrze,
+Szanowna Pani Sekretarz,`
+    }
+    const paragraphs = [[`
+W dniu 01.07.2026 Kareem Awad rozpoczął strajk głodowy w proteście przeciwko utrudnianiu ukończenia studiów po powrocie z misji Global Sumud Flotilla.
+
+Kareem jest studentem ostatniego roku medycyny na Uniwersytecie Medycznym im. Piastów Śląskich we Wrocławiu. Uczestniczył w tegorocznej misji do Gazy jako medyk, został porwany przez izraelskie wojsko z wód międzynarodowych, przetrzymywany na tzw. "Statku-więzienie", a następnie przewieziony do izraelskiego więzienia o zaostrzonym rygorze K'tziot na pustyni Negew. W trakcie  aresztu otrzymał brutalne traktowanie, ujawnione na opublikowanych w sieci filmikach Itamara Ben Gvira, które zostało potępione przez polską dyplomację. Pod koniec maja został uwolniony i powrócił do Polski, gdzie kontynuował naukę i niezbędne egzaminy. 
+Uczestnicząc w misji humanitarnej do Gazy, student usiłował nie tylko dostarczyć niezbędną pomoc humanitarną, ale również zwrócić uwagę społeczności międzynarodowej na panujące w Palestynie ludobójstwo i okupację. Jako medyk solidaryzuje się z palestyńską i międzynarodową społecznością medyczną, która często była celem ataków wojska izraelskiego w trakcie niesienia pomocy w Gazie. Uniwersytet i środowisko studenckie jawnie wspierało Kareema w jego staraniach dostarczenia pomocy medycznej jako delegat Global Sumud Flotilla.
+
+Mimo deklaracji, Uniwersytet Medyczny nie pozwala na ukończenie przez Kareema studiów. Od dopuszczenia do PCT dzieli studenta decyzja jednej z dwóch osób - kierowniczki Kliniki Pediatrii bądź Prodziekan ds. Studiów Anglojęzycznych.
+
+Do tego Kareem Awad potrzebuje zaledwie zaliczenia PCT (Practical Clinical Training) w pediatrii. PCT to 6 tygodni praktyk które może zrealizować do września. Student rozpoczął strajk w odpowiedzi na odmowę możliwości przystąpienia do przedmiotu, bez podania przyczyny. W wysiłkach o dopuszczenie go do PCT, wspierają go studenci 6, 5 i 4 roku studiów medycznych, którzy skierowali do władz uniwersytetu list otwarty. 
+
+
+Po powrocie Kareema z misjii, uniwerytet wydał oświadczenie publiczne o wsparciu studenta w toku dalszych studiów. W już usniętym poście na mediach społecznościowych władze uniwersytetu piszą:
+    "What the University Has Done:
+        [...]
+        Confirmed that Karim's academic standing will not be negatively affected as a result of his absence, acknowledging the humanitarian nature of his mission"
+A w niedawno usuniętym oświadczeniu publicznym, jest napisane:
+    "Since the news broke, the university has taken the following steps:
+        [...]
+        University officials have assured the student body that they are fully committed to supporting Karim in every way within their capacity, and that all necessary accomodations will be made to ensure his academic journey is not negatively impacted upon his return."
+Mimo to kierownik Kliniki Pediatrii oraz Dziekanat uporczywie odmawiają skierowania go na praktyki, nie podając przyczyny, w szczególności na piśmie.
+
+Kareem nie całe dwa miesiące temu był częścią drugiej misji morskiej flotylli Sumud. Płynął jako członek grupy medyków, próbując przełamać blokadę morską Gazy. Po brutalnym traktowaniu przez izraelskie wojsko, udokumentowane przez ministra Itamara Ben Gvira, uniwersytet wynagradza studenta biurokratycznym, upokarzającym procesem. 
+
+W związku z powyższym żądamy umożliwienia Kareemowi przystąpienia do przedmiotu oraz nie blokowania dalszej drogi do ukończenia studiów.
+`
+]]
+    const signatureBegining = "\nZ wyrazami szacunku\n"
+    const pronouns = {
+      "wszyscy": "wszyscy"
+    }
+  </script>
+  <script type="text/javascript" src="../../js/UMWrEmailDict.js"></script>
+  <script type="text/javascript" src="../../js/script.js"></script>
+</head>
+
+<body onload="loadContent()" id="body">
+  
+</body>
+</html>
