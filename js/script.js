@@ -1,4 +1,5 @@
 
+var repoName = 'mail'
 var mailContent = "";
 for (let i = 0; i< paragraphs.length; i++){
     mailContent += paragraphs[i][Math.floor(Math.random() * paragraphs[i].length)] + "\n"
@@ -20,10 +21,13 @@ function shuffle(array) {
     }
 }
 function loadContent() {
+    loc = window.location.href
+    move_up_by = loc.slice(loc.indexOf('/'+repoName+'/')).split('/').length-3
+    move_up_str = '../'.repeat(move_up_by)
     if(language == 'en'){
         linksTxt = `
-        <a href="../../">main page</a>
-        <a href="../../feedback/">send us feedback</a>`
+        <a class="menuBtn" href="`+move_up_str+`">main page</a>
+        <a class="menuBtn" href="`+move_up_str+`feedback/">send us feedback</a>`
         mailTitleFldTxt = "Mail title"
         nameFldTxt = "Full name for the signature"
         groupChoiceFldTxt = "Send to people from groups (uncheck these groups to whom You don't want to send emails)"
@@ -38,14 +42,14 @@ function loadContent() {
     }
     else if(language == 'pl'){
         linksTxt = `
-        <a href="../../">strona główna</a>
-        <a href="../../feedback/">wyślij nam feedback</a>`
+        <a class="menuBtn" href="`+move_up_str+`">strona główna</a>
+        <a class="menuBtn" href="`+move_up_str+`feedback/">wyślij nam feedback</a>`
         mailTitleFldTxt = "Tytuł maila"
-        nameFldTxt = "Imię i Nazwisko do podpisu"
+        nameFldTxt = "Imię i nazwisko do podpisu"
         groupChoiceFldTxt = "Wyślij do osób należących do (odznacz te grupy do których nie chcesz wysyłać maili)"
         pronounChoiceFldTxt = "Które są"
         howManyEmailsFldTxt = "Do ilu osób wysłać mail?"
-        wrongEmailNoticeTxt = 'Niektóre maile mogą być nie poprawne, jeśli dostaniesz odpowiedź "nie znaleziono adresu", daj nam znać.'
+        wrongEmailNoticeTxt = 'Niektóre adresy e-maile mogą być błędne (nieaktualne), jeśli dostaniesz odpowiedź "nie znaleziono adresu", daj nam znać.'
         sendBtnTxt = "wyślij"
         contentFldTxt = "Treść"
         copyTitleBtnTxt = "kopiuj tytuł"
@@ -65,10 +69,10 @@ function loadContent() {
     if (typeof maxNumOfRecipients === 'undefined') {
         minNumOfRecipients = 3
     }
-    document.getElementById("body").innerHTML = 
+    contentStr = 
     `
   <div id="header">
-    <img id="logo" src="../../img/logo/logo_black_en.png">
+    <img id="logo" src="`+move_up_str+`img/logo/logo_black_en.png">
   </div>
   <div id="content">
     <nobr>`+linksTxt+`
@@ -85,9 +89,17 @@ function loadContent() {
       <select id="pronoun" onchange="changeMailContent()">
       </select>
     </div>
-    `+howManyEmailsFldTxt+`:
-    <input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.nextElementSibling.value = this.value">
-    <output id="howManyEmailsOutput">`+defaultNumOfRecipients+`</output> 
+    `+howManyEmailsFldTxt+`:`
+    if(maxNumOfRecipients - minNumOfRecipients < 5){
+        minNumOfRecipients = maxNumOfRecipients -1
+        defaultNumOfRecipients = maxNumOfRecipients
+        contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.nextElementSibling.value = this.value" disabled>`
+    }
+    else{
+        contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.nextElementSibling.value = this.value">`
+    }
+    
+    contentStr += `<output id="howManyEmailsOutput">`+defaultNumOfRecipients+`</output> 
     `+wrongEmailNoticeTxt+`
     <button onclick="sendFunction()">`+sendBtnTxt+`</button><br>
     <form autocomplete="off">
@@ -101,6 +113,7 @@ function loadContent() {
     <button onclick="copyTekst()">`+copyContentBtnTxt+`</button>
     <button onclick="copyAddresses()">`+copyEmailsBtnTxt+`</button>
   </div>`
+    document.getElementById("body").innerHTML = contentStr
     selectPoczatekStr = "";
     Object.keys(pronouns).forEach(function(key){
         selectPoczatekStr += "<option value=\""+key+"\">"+pronouns[key]+"</option>"

@@ -89,6 +89,12 @@ select{
 #fedbackTextarea{
   height:30vh;
 }
-a{
+.menuBtn{
   background-color: #F4F1E5;
+}
+
+.innerDiv{
+  background-color: #F4F1E5;
+  padding: 5px;
+  margin-top: 10px;
 }

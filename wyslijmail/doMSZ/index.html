@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>wyślij maila</title>
+  <link rel="stylesheet" href="../../style.css">
+  <script>
+    const language = 'pl'
+    maxNumOfRecipients = 21
+    defaultNumOfRecipients = 20
+    minNumOfRecipients = 21
+    const titles = [
+      "Polscy obywatele porwani", "Izrael znowu porywa", "Żądamy interwencji","Życie członków Global Sumud Flotilla zagrożone"
+];
+    firstSentences = {
+      "europosel": "Szanowny Panie europośle,",
+      "mezczyzna": "Szanowny Panie Pośle,",
+      "kobieta": "Szanowna Pani Posłanko,",
+      "wszyscy": "Szanowny Panie Ministrze, Szanowni Państwo,"
+    }
+    const paragraphs = [[`
+Po raz kolejny na naszych oczach rząd Izraela złamał prawo międzynarodowe atakując łodzie oraz porywając ich załogi, będące częścią pokojowej misji Global Sumud Flotilla, płynącej do Gazy z pomocą humanitarną. Wśród porwanych znaleźli się również polscy obywatele. Przechwycenie łodzi nastąpiło w odległości około 250 mil morskich od wybrzeży Strefy Gazy, na wodach międzynarodowych. Minister Radosław Sikorski słusznie potępił skandaliczne zachowanie izraelskiego ministra bezpieczeństwa narodowego Itamara Ben Gvira, który poniżał i fizycznie zaatakował aktywistów. Słusznie zwrócił się do szefa MSWiA Marcina Kierwińskiego z apelem, aby minister Ben Gvir otrzymał w związku z tym zakaz wjazdu na terytorium Polski. Jednakże sposób, w jaki Itamar Ben Gvir postąpił z działaczami Global Sumud był i tak wyjątkowo łaskawy w porównaniu do tego, jak bestialsko w izraelskich więzieniach traktowana jest ludność palestyńska. Nie ma i nigdy nie będzie naszej zgody na to, aby życie ludzkie mierzone było siłą paszportu. Nie ma i nigdy nie będzie naszej zgody na to, aby jakikolwiek polityk z rządu Izraela był witany w naszym kraju, ponieważ Polska pamięta, czym jest ludobójstwo. Najwyższy czas rozszerzyć ten zakaz na pozostałych izraelskich zbrodniarzy wojennych. W pierwszej kolejności tych, którzy zostali objęci wyrokiem Międzynarodowego Trybunału Karnego wydanego pod zarzutem zbrodni wojennych i zbrodni przeciwko ludzkości, na czele z premierem Benjaminem Netanjahu i byłym ministrem obrony Joawem Galantem. Domagamy się zakazu wjazdu na terytorium Polski dla wszystkich przedstawicieli izraelskiego parlamentu, którzy niedawno uchwalili ustawę Death Penalty for Terrorists Law wprowadzającą domyślną karę śmierci dla Palestyńczyków.
+`
+],[
+`
+W ostatnich dniach Izrael znowu dokonał nielegalnego przechwycenia łodzi pokojowej misji Global Sumud Flotilla. Do porwania doszło na wodach międzynarodowych. Do łodzi oddano strzały, płynący pod polską banderą statek został staranowany. Wśród porwanych znajdują się też Polacy - Łukasza Kozak i Agata Wisłocka, a także studiujący w Polsce Kareem Awad. Izraelski minister Ben Gvir chwalił się w zamieszczonych w social mediach nagrania, jak jego ludzie, w jego obecności znęcają się fizycznie nad zatrzymanymi. 
+
+Równolegle wyruszył Globalny Specjalistyczny Konwój pomocowy Sumud, w którym wraz z uczestnikami z całego świata bierze udział polska delegacja. Konwój zbliża się do przejścia granicznego z Rafah w Egipcie. Częścią konwoju lądowego jest Laura Kwoczała Al-Subaih.
+ 
+Jako minister spraw zagranicznych Rzeczypospolitej Polskiej ma Pan obowiązek zapewnić im bezpieczeństwo, a My jako obywatele mamy prawo się tego domagać i rozliczyć Pana z podjętych działań. 
+
+`,
+`
+W dniach 18-19.05 Izrael znów przechwycił statki Global Sumud Flotilla. Do porwania jej uczestników doszło na wodach międzynarodowych! Żołnierze IDF zaczęli strzelać do łodzi, na której znajdował się studiujący w Polsce Kareem Awad. Nie mniej oburzająca była próba staranowania łodzi płynącej pod polską banderą! Porwani polskich obywateli Łukasza Kozaka i Agatę Wisłocką. 
+
+Równolegle drogą lądową ruszył Globalny Specjalistyczny Konwój pomocowy Sumud, w którym wraz z uczestnikami z całego świata bierze udział polska delegacja. Konwój zbliża się do przejścia granicznego z Rafah w Egipcie. Częścią konwoju lądowego jest polska obywatelka Laura Kwoczała Al-Subaih.
+
+Izraelskie media od tygodni prowadzą akcję dezinformacyjna na temat pokojowych misji. Izraelski rząd wprost mówił, że jest gotowy na scenariusz z 2010 roku kiedy to grupa komandosów z oddziału Shayetet 13 zabiła 10 cywilów płynących z misją humanitarną do Gazy. Obecnie media obiegają nagrania jak Ben Gvir osobiście nadzoruje i bierze udział w znęcaniu się nad porwanymi działaczami. Co Pan na to? Jak może Pan pozwolić, aby minister innego państwa osobiście znęcał się nad ludźmi, których Pana obowiązkiem, jest chronić! 
+Jak może Pan milczeć, kiedy cywile są porywani na wodach międzynarodowych, a tym samym gwałcone jest prawo międzynarodowe, które obowiązuje również Polskę i Izrael. W końcu, jak od lat może Pan ignorować trwające ludobójstwo?
+
+`,
+`
+Na naszych oczach łamane jest prawo międzynarodowe, a ludzie są porywani!
+W ostatnich dniach Izrael znowu przechwycił łodzie pokojowej misji Global Sumud Flotilla, atakując statki płynące pod polską banderą, porywając polskich obywateli. Wśród porwanych działaczy znajdują się Łukasz Kozak, który właśnie rozpoczął strajk głodowy i Agata Maria Wisłocka. Jako obywatele z przerażeniem obserwowaliśmy działania IDF, szczególnie, że izraelski rząd wprost zapowiedział, że przewiduje powtórzenie scenariusza z 2010 roku, kiedy to zamordowano 10 wolontariuszy na łodzi Mavi Marmara, która płynęła z misją humanitarną do Gazy. Przejęcia dokonywali nawet komandosi z Shayetet 13, tej samej jednostki IDF, która z zimną krwią zamordowała załogę Mavi Marmara. Podczas ostatniego przechwycenia do łodzi, na której znajdował się studiujący w Polsce Kareem Awad, oddano strzały. Łódź pod polską banderą staranowano. Nie mamy informacji o stanie załogi.
+
+Nasze serca są też z członkami lądowego konwoju humanitarnego Sumud, w którym wraz z uczestnikami z całego świata bierze udział Polka Laura Kwoczała Al-Subaih. Konwój zbliża się do przejścia granicznego z Rafah w Egipcie. 
+
+Z rosnącym przerażeniem i oburzeniem oglądamy filmy, na których minister Ben Gvir chwali się, że bierze udział w fizycznym znęcaniu się i poniżaniu zatrzymanych. Z każdym zamieszczonym postem, każdym komunikatem izraelskiego rządu obejmuje nas coraz większy gniew, ponieważ nic nie wskazuje na to, żeby ktoś zatrzymał bezkarny, izraelski reżim. Jako minister ma Pan obowiązek interweniować! Złamane zostało prawo międzynarodowe, które miało chronić także obywateli polski, tych, za których jest Pan bezpośrednio odpowiedzialny. Jeśli coś się stanie, któremukolwiek z polskich obywateli albo płynących pod polską banderą, to ich krew będzie na Pana rękach i tego nie wybaczymy.
+
+`],
+[
+  `
+Nie zgadzamy się na żadną współpracę z Izraelem przynajmniej do czasu, aż to państwo zacznie realnie przestrzegać praw człowieka i prawa humanitarnego. 
+
+1. Domagamy się zerwania umów oświatowych, stosunków gospodarczych i kulturowych oraz podjęcia innych działań dyplomatycznych analogicznych do tych, które zostały podjęte wobec Federacji Rosyjskiej po inwazji na Ukrainę w 2022 roku. 
+
+2. Domagamy się zawieszenia eksportu broni, technologii wojskowych i produktów podwójnego zastosowania, ponieważ tego rodzaju wymiana handlowa z państwem przeprowadzającym czystki etniczne jest dla Polski hańbą, której nie zmyją żadne przyszłe oświadczenia, wyrazy zaniepokojenia, stanowcze potępienia czy jakiekolwiek inne retoryczne zabiegi, na które naszych władz, w tym Państwa, nie stać nawet dzisiaj. 
+
+3. Publicznego i jednoznaczego wezwania społeczności międzynarodowej do otworzenia korytarza humanitarnego.
+
+4. Nałożenia sankcji indywidualnych na osoby odpowiedzialne za planowanie, wydawanie rozkazów i usprawiedliwianie naruszeń praw człowieka, w tym za bezprawne zatrzymania i blokadę pomocy.
+
+5. Jednoznacznego potępienia bezprawnych zatrzymań na wodach międzynarodowych oraz wezwania do poszanowania wolności żeglugi, prawa do pokojowej działalności humanitarnej i ochrony osób niosących pomoc cywilom. 
+
+6. Zapewnienia bezpiecznej deportacji i repatriacji ofiar nadużyć, tortur, nieludzkiego traktowania, z pełnym poszanowaniem ich wolności, stanu zdrowia i prawa do ochrony prawnej.
+
+7. Wprowadzenia indywidualnej odpowiedzialności finansowej i politycznej wobec osób i instytucji uczestniczących w naruszeniach, w tym poprzez sankcje wizowe, zamrożenie aktywów i ograniczenie współpracy instytucjonalnej.
+ 
+`
+]]
+    const signatureBegining = "\nZ wyrazami szacunku \n"
+    const pronouns = {
+      "wszyscy": "wszyscy"
+      // "mezczyzna": "mężczyzną",
+      // "kobieta": "kobietą",
+      // "europosel": "europosłem"
+    }
+  </script>
+  <script type="text/javascript" src="../../js/mszEmailDict.js"></script>
+  <script type="text/javascript" src="../../js/script.js"></script>
+</head>
+
+<body onload="loadContent()" id="body">
+<!-- 
+<body id="body"> 
+
+  <div id="header">
+    <img id="logo" src="../../img/logo/logo_black_en.png">
+  </div>
+  <div id="content">
+    <nobr>
+        <a href="../../">strona główna</a>
+        <a href="../../feedback/">wyślij nam feedback</a>
+    </nobr>
+    <br>
+    Akcja chwilowo zamknięta, inne otwarte są na <nobr><a href="../../">stronie głównej</a></nobr>
+  </div> -->
+  
+</body>
+</html>
