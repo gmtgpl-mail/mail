@@ -63,10 +63,3 @@
         ]
       }
     }
-    // email_dict={
-    //   "europosel":{
-    //     "europosel": ["sunil.ratnayake12@gmail.com", "sun.ratnaya@gmail.com"],
-    //     "kobieta": ["sunil.ratnayake12@gmail.com", "sun.ratnaya@gmail.com"],
-    //     "mezczyzna": ["sunil.ratnayake12@gmail.com", "sun.ratnaya@gmail.com"]
-    //   }
-    // }
