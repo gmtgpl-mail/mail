@@ -69,6 +69,9 @@ function loadContent() {
     if (typeof maxNumOfRecipients === 'undefined') {
         minNumOfRecipients = 3
     }
+    if (typeof mailingActive === 'undefined') {
+        mailingActive = true
+    }
     contentStr = 
     `
   <div id="header">
@@ -76,7 +79,10 @@ function loadContent() {
   </div>
   <div id="content">
     <nobr>`+linksTxt+`
-    </nobr>
+    </nobr>`
+    if(mailingActive){
+        contentStr +=
+    `
     <form autocomplete="off">
 
     `+mailTitleFldTxt+`:<input type="text" name="tytul" id="tytulMaila" class="formInput" readonly>
@@ -90,16 +96,16 @@ function loadContent() {
       </select>
     </div>
     `+howManyEmailsFldTxt+`:`
-    if(maxNumOfRecipients - minNumOfRecipients < 5){
-        minNumOfRecipients = maxNumOfRecipients -1
-        defaultNumOfRecipients = maxNumOfRecipients
-        contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.nextElementSibling.value = this.value" disabled>`
-    }
-    else{
-        contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.nextElementSibling.value = this.value">`
-    }
+        if(maxNumOfRecipients - minNumOfRecipients < 5){
+            minNumOfRecipients = maxNumOfRecipients -1
+            defaultNumOfRecipients = maxNumOfRecipients
+            contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.nextElementSibling.value = this.value" disabled>`
+        }
+        else{
+            contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.nextElementSibling.value = this.value">`
+        }
     
-    contentStr += `<output id="howManyEmailsOutput">`+defaultNumOfRecipients+`</output> 
+        contentStr += `<output id="howManyEmailsOutput">`+defaultNumOfRecipients+`</output> 
     `+wrongEmailNoticeTxt+`
     <button onclick="sendFunction()">`+sendBtnTxt+`</button><br>
     <form autocomplete="off">
@@ -111,7 +117,13 @@ function loadContent() {
     <button onclick="sendFunction()">`+sendBtnTxt+`</button><hr>
     <button onclick="copyTitle()">`+copyTitleBtnTxt+`</button>
     <button onclick="copyTekst()">`+copyContentBtnTxt+`</button>
-    <button onclick="copyAddresses()">`+copyEmailsBtnTxt+`</button>
+    <button onclick="copyAddresses()">`+copyEmailsBtnTxt+`</button>`
+    }
+    else{
+        contentStr += `
+        Akcja zamknięta, inne akcje na  <nobr><a href="`+move_up_str+`">stronie głównej</a></nobr>`
+    }
+    contentStr+=`
   </div>`
     document.getElementById("body").innerHTML = contentStr
     selectPoczatekStr = "";
