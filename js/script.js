@@ -121,7 +121,7 @@ function loadContent() {
     }
     else{
         contentStr += `
-        Akcja zamknięta, inne akcje na  <nobr><a href="`+move_up_str+`">stronie głównej</a></nobr>`
+        Akcja zamknięta albo jeszcze nie otwarta, inne akcje na  <nobr><a href="`+move_up_str+`">stronie głównej</a></nobr>`
     }
     contentStr+=`
   </div>`
