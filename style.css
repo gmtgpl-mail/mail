@@ -1,9 +1,7 @@
 #content {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   width: 60vw;
-  /* min-width: 10px; */
   background-color: #FF462A;
   position:absolute;
   left: 20vw;
@@ -51,27 +49,18 @@
   }
 }
 body{
-  /* text-align: center; */
   align-items: center;
   background-color: #F4F1E5;
-  /* background-image: url("img/logo/logo_bg_black_en.png");
-  background-attachment: fixed; */
-  /* background-size: 640px 360px; */
-  /* background-size: 6rem;
-  background-clip: border-box;
-  background-position: 0%, 10%; */
-  /* background-repeat:space */
 }
 textarea{ 
   width: 98%;
   height: 98vh;
-  /* height: fit-content; */
 }
 form{
   width: 100%
 }
 .formInput {
-  width: 100%
+  width: 99%
 }
 select{
   width: 20%
@@ -89,12 +78,40 @@ select{
 #fedbackTextarea{
   height:30vh;
 }
-.menuBtn{
-  background-color: #F4F1E5;
-}
 
-.innerDiv{
-  background-color: #F4F1E5;
+#innerContent{
+  background-color: #ebe3c7;
   padding: 5px;
   margin-top: 10px;
+}
+#innerContent button{
+  width: 100%
+}
+
+#menu {
+    display: table; 
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    table-layout: fixed;
+}
+
+#menu li {
+    display: table-cell;
+}
+
+#menu li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center; 
+    background-color: #F4F1E5;
+}
+
+#menu li a:hover {
+    background-color: #D4D1C5;
+}
+
+#howManyEmails {
+  width:100%
 }

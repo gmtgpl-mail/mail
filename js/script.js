@@ -26,8 +26,8 @@ function loadContent() {
     move_up_str = '../'.repeat(move_up_by)
     if(language == 'en'){
         linksTxt = `
-        <a class="menuBtn" href="`+move_up_str+`">main page</a>
-        <a class="menuBtn" href="`+move_up_str+`feedback/">send us feedback</a>`
+        <li><a class="menuBtn" href="`+move_up_str+`">main page</a></li>
+        <li><a class="menuBtn" href="`+move_up_str+`feedback/">send us feedback</a></li>`
         mailTitleFldTxt = "Mail title"
         nameFldTxt = "Full name for the signature"
         groupChoiceFldTxt = "Send to people from groups (uncheck these groups to whom You don't want to send emails)"
@@ -42,8 +42,8 @@ function loadContent() {
     }
     else if(language == 'pl'){
         linksTxt = `
-        <a class="menuBtn" href="`+move_up_str+`">strona główna</a>
-        <a class="menuBtn" href="`+move_up_str+`feedback/">wyślij nam feedback</a>`
+        <li><a class="menuBtn" href="`+move_up_str+`">strona główna</a></li>
+        <li><a class="menuBtn" href="`+move_up_str+`feedback/">wyślij nam feedback</a></li>`
         mailTitleFldTxt = "Tytuł maila"
         nameFldTxt = "Imię i nazwisko do podpisu"
         groupChoiceFldTxt = "Wyślij do osób należących do (odznacz te grupy do których nie chcesz wysyłać maili)"
@@ -78,8 +78,9 @@ function loadContent() {
     <img id="logo" src="`+move_up_str+`img/logo/logo_black_en.png">
   </div>
   <div id="content">
-    <nobr>`+linksTxt+`
-    </nobr>`
+    <ul id="menu">`+linksTxt+`
+    </ul>
+    <div id="innerContent">`
     if(mailingActive){
         contentStr +=
     `
@@ -95,7 +96,7 @@ function loadContent() {
       <select id="pronoun" onchange="changeMailContent()">
       </select>
     </div>
-    `+howManyEmailsFldTxt+`:`
+    `+howManyEmailsFldTxt+`: <output id="howManyEmailsOutput">`+defaultNumOfRecipients+`</output>`
         if(maxNumOfRecipients - minNumOfRecipients < 5){
             minNumOfRecipients = maxNumOfRecipients -1
             defaultNumOfRecipients = maxNumOfRecipients
@@ -105,7 +106,7 @@ function loadContent() {
             contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.nextElementSibling.value = this.value">`
         }
     
-        contentStr += `<output id="howManyEmailsOutput">`+defaultNumOfRecipients+`</output> 
+        contentStr += `
     `+wrongEmailNoticeTxt+`
     <button onclick="sendFunction()">`+sendBtnTxt+`</button><br>
     <form autocomplete="off">
@@ -124,6 +125,7 @@ function loadContent() {
         Akcja zamknięta albo jeszcze nie otwarta, inne akcje na  <nobr><a href="`+move_up_str+`">stronie głównej</a></nobr>`
     }
     contentStr+=`
+    </div>
   </div>`
     document.getElementById("body").innerHTML = contentStr
     selectPoczatekStr = "";
