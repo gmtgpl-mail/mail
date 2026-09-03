@@ -34,6 +34,7 @@ function loadContent() {
         pronounChoiceFldTxt = "Who are a"
         howManyEmailsFldTxt = "how many recipients?"
         wrongEmailNoticeTxt = 'Some email addresses might be wrong, if You have issuses message us! '
+        mailToFailNoticeTxt = "Sometimes the 'send' button won't work, in such cases use the 'Copy title', 'Copy text' and 'Copy email address' buttons, to manually paste the email contents into Your mail client of choice."
         sendBtnTxt = "Send"
         contentFldTxt = "Mail content"
         copyTitleBtnTxt = "Copy title"
@@ -50,6 +51,7 @@ function loadContent() {
         pronounChoiceFldTxt = "Które są"
         howManyEmailsFldTxt = "Do ilu osób wysłać mail?"
         wrongEmailNoticeTxt = 'Niektóre adresy e-maile mogą być błędne (nieaktualne), jeśli dostaniesz odpowiedź "nie znaleziono adresu", daj nam znać.'
+        mailToFailNoticeTxt = "Czasami przycisk 'wyślij' nie będzie działał, w takim przypadku użyj przycisków 'kopiuj tytuł', 'kopiuj tekst' i 'kopiuj adresy e-mail' na dole strony, żeby ręcznie wkleić zawartość maila do swojego klienta mail."
         sendBtnTxt = "wyślij"
         contentFldTxt = "Treść"
         copyTitleBtnTxt = "kopiuj tytuł"
@@ -71,6 +73,9 @@ function loadContent() {
     }
     if (typeof mailingActive === 'undefined') {
         mailingActive = true
+    }
+    if (typeof footnotes === 'undefined'){
+        footnotes = ""
     }
     contentStr = 
     `
@@ -100,14 +105,14 @@ function loadContent() {
         if(maxNumOfRecipients - minNumOfRecipients < 5){
             minNumOfRecipients = maxNumOfRecipients -1
             defaultNumOfRecipients = maxNumOfRecipients
-            contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.nextElementSibling.value = this.value" disabled>`
+            contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.previousElementSibling.value = this.value" disabled>`
         }
         else{
-            contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.nextElementSibling.value = this.value">`
+            contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.previousElementSibling.value = this.value">`
         }
     
         contentStr += `
-    `+wrongEmailNoticeTxt+`
+    `+wrongEmailNoticeTxt+`<br><text style='color:red'>!</text>`+mailToFailNoticeTxt+`
     <button onclick="sendFunction()">`+sendBtnTxt+`</button><br>
     <form autocomplete="off">
     `+contentFldTxt+`:
@@ -140,7 +145,7 @@ function loadContent() {
     })
     document.getElementById("groupChoice").innerHTML = groupChoiceStr;
     signature = signatureBegining + document.getElementById("mailSignature").value
-    document.getElementById("mailContent").innerHTML = pierwszeZdanie + mailContent + signature;
+    document.getElementById("mailContent").innerHTML = pierwszeZdanie + mailContent + signature + footnotes;
     document.getElementById("tytulMaila").value = tytul;
 }
 function getEmailStr(){
@@ -169,7 +174,7 @@ function getEmailStr(){
     for (let i = 0; i < returnEmailsNum; i++){
         emailStr += emails[i]
         if(i+1<returnEmailsNum){
-            emailStr+= ", "
+            emailStr+= ","
         }
     }
     return emailStr
@@ -178,13 +183,14 @@ function sendFunction() {
     emailStr = getEmailStr()
     tytul = encodeURIComponent(document.getElementById("tytulMaila").value);
     tekst = encodeURIComponent(document.getElementById("mailContent").innerHTML);
+    console.log('mailto:'+emailStr+'?subject=' + tytul + '&body=' + tekst)
     window.open('mailto:'+emailStr+'?subject=' + tytul + '&body=' + tekst);
     randomizeContent()
 }
 function changeMailContent(){
     pierwszeZdanie = firstSentences[document.getElementById('pronoun').value]+"\n";
     signature = signatureBegining + document.getElementById("mailSignature").value;
-    document.getElementById("mailContent").innerHTML = pierwszeZdanie + mailContent + signature;
+    document.getElementById("mailContent").innerHTML = pierwszeZdanie + mailContent + signature + footnotes;
 }
 function randomizeContent(){
     pierwszeZdanie = firstSentences[document.getElementById('pronoun').value]+"\n";
@@ -194,7 +200,7 @@ function randomizeContent(){
         mailContent += paragraphs[i][Math.floor(Math.random() * paragraphs[i].length)] + "\n"
     }
     tytul = titles[Math.floor(Math.random() * titles.length)];
-    document.getElementById("mailContent").innerHTML = pierwszeZdanie + mailContent + signature;
+    document.getElementById("mailContent").innerHTML = pierwszeZdanie + mailContent + signature + footnotes;
     document.getElementById("tytulMaila").value = tytul;
 }
 function copyTitle(){

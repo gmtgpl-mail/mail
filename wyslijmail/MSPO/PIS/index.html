@@ -2,26 +2,27 @@
 <html>
 
 <head>
-  <title>MSPO - prezydent</title>
+  <title>MSPO - parlamentarzyści PIS</title>
   <link rel="stylesheet" href="../../../style.css">
   <script>
     mailingActive = false
     const language = 'pl'
-    maxNumOfRecipients = 2
-    defaultNumOfRecipients = 2
-    minNumOfRecipients = 2
+    maxNumOfRecipients = 100
+    defaultNumOfRecipients = 100
+    minNumOfRecipients = 10
     const titles = [
       "Targi bez zbrodniarzy"
 ];
     firstSentences = {
-      "wszyscy": `Szanowni Państwo,
-Szanowny Panie Prezydencie,`
+      "europosel": "Szanowny Panie europośle,",
+      "mezczyzna": "Szanowny Panie Pośle/Senatorze,",
+      "kobieta": "Szanowna Pani Posłanko/Senatorko,"
     }
     const paragraphs = [[`
 
-Polska racja stanu wymaga dziś jasnego głosu. Jako Honorowy Patron Międzynarodowego Salonu Przemysłu Obronnego MSPO ma Pan nie tylko prawo, ale i obowiązek – wobec polskiego honoru i pamięci o polskim bohaterze – zabrać ten głos.
+Polska racja stanu wymaga dziś jasnego głosu. Jako parlamentarzyści największej partii opozycyjnej, która wsparła Karola Nawrockiego w drodze do Pałacu Prezydenckiego, mają Państwo nie tylko prawo, ale i obowiązek – wobec polskiego honoru i pamięci o polskim bohaterze – stanowczo postawić granicę i pokazać naszą siłę.
 
-Na tegorocznych targach w Kielcach swoje stoiska rozkłada dziewiętnaście izraelskich firm zbrojeniowych – dwa razy więcej niż rok temu. Wśród nich Rafael [1], IAI [2] oraz SCD – spółka-córka Elbit Systems [3], głównego dostawcy sprzętu dla izraelskich sił okupacyjnych. To firmy, które dostarczają narzędzia do ludobójstwa w Strefie Gazy i testują swoją broń na ludności cywilnej, by potem reklamować ją jako „sprawdzoną w boju”.
+Na tegorocznych targach MSPO w Kielcach swoje stoiska rozkłada dziewiętnaście izraelskich firm zbrojeniowych – dwa razy więcej niż rok temu. Wśród nich Rafael [1], IAI [2] oraz SCD – spółka-córka Elbit Systems [3], głównego dostawcy sprzętu dla izraelskich sił okupacyjnych. To firmy, które dostarczają narzędzia do ludobójstwa w Strefie Gazy i testują swoją broń na ludności cywilnej, by potem reklamować ją jako „sprawdzoną w boju”.
 
 
 
@@ -42,7 +43,7 @@ Dlatego żądamy:
 
 Sprzeciwiamy się temu nie tylko z moralnego obowiązku, ale przede wszystkim z powodu umocowań prawnych Polski. Jeśli MSPO nie odstąpi od promowania izraelskich firm, sprawa nieuchronnie może znaleźć swój finał przed Międzynarodowym Trybunałem Sprawiedliwości w Hadze.
 
-Mówił Pan na forum ONZ: „Musimy zbudować międzynarodowy system odpowiedzialności, który nie zawaha się nazywać zła po imieniu, bez względu na to, jaką flagę nosi na ramieniu. Musimy jasno powiedzieć, że istnieją granice, istnieją prawa człowieka, istnieje prawo międzynarodowe, a każdy, kto je łamie, powinien ponieść surowe konsekwencje”. Dziś to prawo zostało pogwałcone. Śledztwo w sprawie zabójstwa polskiego obywatela zostało umorzone. Sprawcy pozostają bezkarni. A polskie targi zbrojeniowe – pod Pana honorowym patronatem – stają się platformą promocji dla ich pracodawców.
+Prezydent Karol Nawrocki mówił na forum ONZ: „Musimy zbudować międzynarodowy system odpowiedzialności, który nie zawaha się nazywać zła po imieniu, bez względu na to, jaką flagę nosi na ramieniu. Musimy jasno powiedzieć, że istnieją granice, istnieją prawa człowieka, istnieje prawo międzynarodowe, a każdy, kto je łamie, powinien ponieść surowe konsekwencje”. Dziś to prawo zostało pogwałcone. Śledztwo w sprawie zabójstwa polskiego obywatela zostało umorzone. Sprawcy pozostają bezkarni. A polskie targi zbrojeniowe – pod honorowym patronatem najwyższego zwierzchnika Sił Zbrojnych RP  – stają się platformą promocji dla ich pracodawców.
 
 Polska jest państwem frontowym, zagrożonym przez Rosję. Naszym najważniejszym orężem w obliczu tego zagrożenia jest wiarygodność – jako państwa prawa, sojusznika i orędownika międzynarodowego ładu. Jeśli w obliczu ludobójstwa w Gazie odwracamy wzrok, promujemy zbrodniarzy i nagradzamy ich kontraktami, podkopujemy własne argumenty wobec Putina. Na targach MSPO słusznie nie ma miejsca dla rosyjskich firm – oczekujemy tej samej konsekwencji wobec Izraela.
 
@@ -51,14 +52,11 @@ Polska jest państwem frontowym, zagrożonym przez Rosję. Naszym najważniejszy
 Damian Soból z Przemyśla zginął, niosąc pomoc głodującym cywilom w Strefie Gazy. Domagamy się sprawiedliwości dla niego oraz wszystkich ofiar izraelskiej okupacji. Pamięć o nich zobowiązuje nas do działania, a bezkarność sprawców musi się zakończyć. Nie pozwólmy, by polska flaga otaczała patronatem tych, którzy mają na rękach krew naszych rodaków.
 
 W Polsce i w Kielcach nie ma miejsca dla zbrodniarzy wojennych – bez względu na to, z którego kraju pochodzą.
-
-
 `]]
     const signatureBegining = "\nZ poważaniem,\n"
     const pronouns = {
-      "wszyscy": "oficjalny kontakt"
-      // "mezczyzna": "mężczyzną",
-      // "kobieta": "kobietą",
+      "mezczyzna": "mężczyzną",
+      "kobieta": "kobietą",
       // "europosel": "europosłem"
     }
     const footnotes = `
@@ -74,17 +72,12 @@ Rafael Advanced Defense Systems Ltd., „Rafael Reports Record FY2024 Results wi
 [4] Haaretz. „IDF Drone Bombed World Central Kitchen Aid Convoy Three Times, Targeting Armed Hamas Member Who Wasn’t There.” Haaretz, 2024,
 https://www.haaretz.com/israel-news/2024-04-02/ty-article/.premium/idf-bombed-wck-aid-convoy-3-times-targeting-armed-hamas-member-who-wasnt-there/0000018e-9e75-d764-adff-9eff29360000`
 
-email_dict = {
-    "kanały oficjalne":{
-        "wszyscy": ["listy@prezydent.pl", "centrum@prezydent.pl"]
-    }
-}
   </script>
   <script type="text/javascript" src="../../../js/script.js"></script>
+  <script type="text/javascript" src="../../../js/pisEmailDict.js"></script>
 </head>
 
 <body onload="loadContent()" id="body">
 
-  
 </body>
 </html>
