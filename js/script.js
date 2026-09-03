@@ -183,7 +183,6 @@ function sendFunction() {
     emailStr = getEmailStr()
     tytul = encodeURIComponent(document.getElementById("tytulMaila").value);
     tekst = encodeURIComponent(document.getElementById("mailContent").innerHTML);
-    console.log('mailto:'+emailStr+'?subject=' + tytul + '&body=' + tekst)
     window.open('mailto:'+emailStr+'?subject=' + tytul + '&body=' + tekst);
     randomizeContent()
 }
