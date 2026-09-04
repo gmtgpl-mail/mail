@@ -47,6 +47,10 @@
   select{
     font-size: 0.7em;
   }
+  input{
+    height: 1em;
+    width: 1em;
+  }
 }
 body{
   align-items: center;
