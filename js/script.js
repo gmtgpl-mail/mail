@@ -50,7 +50,7 @@ function loadContent() {
         groupChoiceFldTxt = "Wyślij do osób należących do (odznacz te grupy do których nie chcesz wysyłać maili)"
         pronounChoiceFldTxt = "Które są"
         howManyEmailsFldTxt = "Do ilu osób wysłać mail?"
-        wrongEmailNoticeTxt = 'Niektóre adresy e-maile mogą być błędne (nieaktualne), jeśli dostaniesz odpowiedź "nie znaleziono adresu", daj nam znać.'
+        wrongEmailNoticeTxt = 'Niektóre adresy e-maile mogą być błędne (nieaktualne), jeśli dostaniesz odpowiedź "nie znaleziono adresu", poinformuj nas używając formularza dostępnego na górze strony.'
         mailToFailNoticeTxt = "Czasami przycisk 'wyślij' nie będzie działał, w takim przypadku użyj przycisków 'kopiuj tytuł', 'kopiuj tekst' i 'kopiuj adresy e-mail' na dole strony, żeby ręcznie wkleić zawartość maila do swojego klienta mail."
         sendBtnTxt = "wyślij"
         contentFldTxt = "Treść"
@@ -97,22 +97,16 @@ function loadContent() {
     <div id="divGroup">
       `+groupChoiceFldTxt+`:<br>
       <div id="groupChoice"></div>
-      `+pronounChoiceFldTxt+`:
-      <select id="pronoun" onchange="changeMailContent()">
-      </select>
+      <div id="pronounChoice">`+pronounChoiceFldTxt+`:
+        <select id="pronoun" onchange="changeMailContent()">
+        </select>
+      </div>
     </div>
-    `+howManyEmailsFldTxt+`: <output id="howManyEmailsOutput">`+defaultNumOfRecipients+`</output>`
-        if(maxNumOfRecipients - minNumOfRecipients < 5){
-            minNumOfRecipients = maxNumOfRecipients -1
-            defaultNumOfRecipients = maxNumOfRecipients
-            contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.previousElementSibling.value = this.value" disabled>`
-        }
-        else{
-            contentStr += `<input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.previousElementSibling.value = this.value">`
-        }
-    
-        contentStr += `
-    `+wrongEmailNoticeTxt+`<br><text style='color:red'>!</text>`+mailToFailNoticeTxt+`
+    <div id=maxEmailCountDiv>
+    `+howManyEmailsFldTxt+`: <output id="howManyEmailsOutput">`+defaultNumOfRecipients+`</output>
+        <input type="range" min="`+minNumOfRecipients+`" max="`+maxNumOfRecipients+`" value="`+defaultNumOfRecipients+`" id="howManyEmails" oninput="this.previousElementSibling.value = this.value">
+    </div>
+    `+wrongEmailNoticeTxt+`<br><div id="noticeDiv"><text style='color:red'>!</text>`+mailToFailNoticeTxt+`</div>
     <button onclick="sendFunction()">`+sendBtnTxt+`</button><br>
     <form autocomplete="off">
     `+contentFldTxt+`:
@@ -138,12 +132,21 @@ function loadContent() {
         selectPoczatekStr += "<option value=\""+key+"\">"+pronouns[key]+"</option>"
     });
     document.getElementById('pronoun').innerHTML = selectPoczatekStr
+    if (Object.keys(pronouns).length<2){
+        document.getElementById("pronounChoice").style.display = "none"
+    }
     pierwszeZdanie = firstSentences[document.getElementById('pronoun').value]+"\n"
     groupChoiceStr = ""
     Object.keys(email_dict).forEach(function(key){
         groupChoiceStr += "<input type=\"checkbox\" id=\""+key+"\" checked>"+key.replace("_"," ")
     })
     document.getElementById("groupChoice").innerHTML = groupChoiceStr;
+    if (Object.keys(email_dict).length<2){
+        document.getElementById("divGroup").style.display = "none"
+    }
+    if(maxNumOfRecipients - minNumOfRecipients < 1){
+        document.getElementById("maxEmailCountDiv").style.display = "none"
+    }
     signature = signatureBegining + document.getElementById("mailSignature").value
     document.getElementById("mailContent").innerHTML = pierwszeZdanie + mailContent + signature + footnotes;
     document.getElementById("tytulMaila").value = tytul;

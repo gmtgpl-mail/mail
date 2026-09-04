@@ -87,6 +87,7 @@ select{
   background-color: #ebe3c7;
   padding: 5px;
   margin-top: 10px;
+  border-radius: 8px;
 }
 #innerContent button{
   width: 100%
@@ -110,6 +111,7 @@ select{
     height: 100%;
     text-align: center; 
     background-color: #F4F1E5;
+    border-radius: 8px;
 }
 
 #menu li a:hover {
@@ -118,4 +120,11 @@ select{
 
 #howManyEmails {
   width:100%
+}
+
+#noticeDiv{
+  border-color: red;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 8px;
 }
